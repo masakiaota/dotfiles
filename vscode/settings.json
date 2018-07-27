@@ -1,0 +1,39 @@
+{
+    "editor.fontSize": 15.5,
+    "editor.renderControlCharacters": true,
+    // ファイルを保存するときにフォーマットしてください。フォーマッタを使用可能にして、ファイルを自動保存せず、エディターをシャットダウンしないでください。
+    "editor.formatOnSave": true,
+    // エディターで入力後に自動的に行の書式設定を行うかどうかを制御します
+    "editor.formatOnType": true,
+    // 貼り付けた内容がエディターにより自動的にフォーマットされるかどうかを制御します。フォーマッタを使用可能にする必要があります。また、フォーマッタがドキュメント内の範囲をフォーマットできなければなりません。
+    "editor.formatOnPaste": true,
+    // 行の折り返し方法を制御します。次の値を指定できます。
+    //  - 'off' (折り返さない),
+    //  - 'on' (ビューポート折り返し),
+    //  - 'wordWrapColumn' ('editor.wordWrapColumn' で折り返し) or
+    //  - 'bounded' (ビューポートと 'editor.wordWrapColumn' の最小値で折り返し).
+    "editor.wordWrap": "on",
+    // 以下のように文字列を追加します。
+    //"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。「」（）；：・？＜＞＋－＊／｛｝｜～＆％＄＃”！’　にをはがのとも",
+    //	半角空白を全て表示します。
+    //	"all" : いつでも表示
+    //	"none" : いつでも非表示
+    //	"boundary" : 単語間の単一スペースのみ非表示、以外はすべて表示
+    "editor.renderWhitespace": "all",
+    "editor.renderLineHighlight": "all",
+    // Controls the line height. Use 0 to compute the lineHeight from the fontSize.
+    "editor.lineHeight": 24,
+    // ミニマップの表示文字をブロックに変更,
+    "editor.minimap.renderCharacters": false, 
+    // ミニマップのスライダーを自動的に非表示にするかどうかを制御します。
+    "editor.minimap.showSlider": "always",
+    //テーマ
+    "workbench.colorTheme": "Monokai Dimmed",
+    "git.enableSmartCommit": true,
+    //拡張機能
+    "markdown-preview-enhanced.breakOnSingleNewLine": false,
+    "python.pythonPath": "/Users/masaki/.pyenv/versions/anaconda3-5.0.0/bin/python",
+
+
+}

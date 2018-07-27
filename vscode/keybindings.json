@@ -1,0 +1,67 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+//dirは/Users/{ユーザー名}/Library/Application Support/Code/User
+[
+    //選択
+    {
+        "key": "shift+ctrl+n",
+        "command": "cursorDownSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+p",
+        "command": "cursorUpSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+f",
+        "command": "cursorRightSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+b",
+        "command": "cursorLeftSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+e",
+        "command": "cursorEndSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+a",
+        "command": "cursorHomeSelect",
+        "when": "editorTextFocus"
+    },
+    //+alt移動
+    {
+        "key": "ctrl+alt+p",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    //視点移動
+    {
+        "key": "cmd+up",
+        "command": "scrollPageUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "scrollLineDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+down",
+        "command": "scrollPageDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "scrollLineUp",
+        "when": "textInputFocus"
+    },
+]
