@@ -48,3 +48,6 @@ end
 
 # git打つのがめんどくさいので
 alias gpl='git pull'
+
+# 日本語を含むdir名とか深い階層へのアクセスが面倒なので
+set lab ./OneDrive/研究室/
