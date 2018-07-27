@@ -4,8 +4,19 @@
 * 必要最低限を意識しろ。
 
 ### 暫くの間のinstall.sh代わり
+codeの設定
 ```
 cd /Users/{ユーザー名}/Library/Application Support/Code/User
 ln -s ~/dotfiles/vscode/keybind.json
-ln -s ~/dotfiles/vscode/keybind.json
+ln -s ~/dotfiles/vscode/settings.json
 ```
+
+fishの設定
+```
+cd ~/.config/fish
+ln -s ~/dotfiles/fish/config.fish
+cd functions
+ln -s ~/dotfiles/fish/fish_prompt.fish
+ln -s ~/dotfiles/fish/fish_user_key_bindings.fish
+```
+
