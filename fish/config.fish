@@ -2,6 +2,8 @@
 #dirは /Users/{ユーザー名}/.config/fish
 function py3
     set PYENV_ROOT $HOME/.pyenv 
+    
+    # なぜかMBAにはbinがないのに動く(エラーがうざいので空でmkdirした)
     set PATH $PYENV_ROOT/bin $PATH
     . (pyenv init - | psub); 
     . (pyenv virtualenv-init - | psub); and python $argv
