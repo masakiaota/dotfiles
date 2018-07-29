@@ -6,8 +6,8 @@
 ### 暫くの間のinstall.sh代わり
 codeの設定
 ```
-cd /Users/{ユーザー名}/Library/Application Support/Code/User
-ln -s ~/dotfiles/vscode/keybind.json
+cd /Users/{ユーザー名}/Library/Application\ Support/Code/User
+ln -s ~/dotfiles/vscode/keybindings.json
 ln -s ~/dotfiles/vscode/settings.json
 ```
 
