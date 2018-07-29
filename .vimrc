@@ -68,3 +68,14 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " 自分の設定
 " emacs keybind
+inoremap <silent> <C-b> <Left>
+inoremap <silent> <C-f> <Right>
+inoremap <silent> <C-p> <Up>
+inoremap <silent> <C-n> <Down>
+inoremap <silent> <C-a> <ESC>I
+inoremap <silent> <C-e> <End>
+inoremap <silent> <C-d> <Del>
+" escape遠い
+inoremap <silent> <C-[> <ESC>
+noremap <C-[> <ESC>
+noremap! <C-[> <ESC>
