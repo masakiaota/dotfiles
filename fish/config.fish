@@ -1,7 +1,8 @@
 #起動の高速化のため、python3と打ったらデフォルトをpython3に変更。以降pythonで3が起動する。
 #dirは /Users/{ユーザー名}/.config/fish
 function py3
-    #set -x PATH $HOME/.pyenv/ $PATH
+    set PYENV_ROOT $HOME/.pyenv 
+    set PATH $PYENV_ROOT/bin $PATH
     . (pyenv init - | psub); 
     . (pyenv virtualenv-init - | psub); and python $argv
 end
@@ -19,7 +20,8 @@ end
 alias rm='rmtrash'
 
 # encoding
-set -x LANG ja_JP.UTF-8
+# -xのオプションがついてる例をよく見るが起動時に読み込まれるから別に永続化させる必要もない
+set LANG ja_JP.UTF-8
 
 #gitのbranch名出す
 function git_branch
