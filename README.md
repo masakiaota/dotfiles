@@ -20,3 +20,8 @@ ln -s ~/dotfiles/fish/fish_prompt.fish
 ln -s ~/dotfiles/fish/fish_user_key_bindings.fish
 ```
 
+vim
+```
+ln -s ~/dotfiles/.vimrc
+```
+
