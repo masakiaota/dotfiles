@@ -9,6 +9,15 @@ function py3
     . (pyenv virtualenv-init - | psub); and python $argv
 end
 
+function notebook
+    set PYENV_ROOT $HOME/.pyenv 
+    
+    # なぜかMBAにはbinがないのに動く(エラーがうざいので空でmkdirした)
+    set PATH $PYENV_ROOT/bin $PATH
+    . (pyenv init - | psub); 
+    . (pyenv virtualenv-init - | psub); and jupyter notebook $argv
+end
+
 
 
 # cd > ls
