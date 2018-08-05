@@ -11,13 +11,14 @@ ln -s ~/dotfiles/vscode/keybindings.json
 ln -s ~/dotfiles/vscode/settings.json
 ```
 
-fishの設定
+fishの設定(fish/にあるlink.shで実行可能)
 ```
 cd ~/.config/fish
 ln -s ~/dotfiles/fish/config.fish
 cd functions
-ln -s ~/dotfiles/fish/fish_prompt.fish
-ln -s ~/dotfiles/fish/fish_user_key_bindings.fish
+ln -s ~/dotfiles/fish/functions/fish_prompt.fish
+ln -s ~/dotfiles/fish/functions/fish_user_key_bindings.fish
+ln -s ~/dotfiles/fish/functions/cd.fish
 ```
 
 vim

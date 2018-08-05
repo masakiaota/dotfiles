@@ -20,13 +20,6 @@ function notebook
 end
 
 
-
-# cd > ls
-# function cd
-#   builtin cd $argv
-#   ls -a
-# end
-
 ## rmでゴミ箱に入れる
 ## brew install rmtrash
 alias rm='rmtrash'
@@ -47,9 +40,9 @@ function fish_right_prompt
 end
 
 # cd後にls 
-function cd
-    builtin cd $argv; and ls
-end
+# function cd
+#     builtin cd $argv; and ls
+# end
 
 
 # gitがめんどくさいので
