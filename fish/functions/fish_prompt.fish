@@ -16,19 +16,22 @@ function fish_prompt --description 'Write out the prompt'
     #echo -n (prompt_hostname)
     #set_color normal
 
-    echo -n ':'
+    echo -n ':  git'
+    __terlar_git_prompt
+    __fish_hg_prompt
+
+    # new line
+    echo
 
     # PWD
     set_color $fish_color_cwd
     #echo -n (prompt_pwd)
-    set -g fish_prompt_pwd_dir_length 7
+    set -g fish_prompt_pwd_dir_length 6
     echo -n (prompt_pwd)
     set_color normal
 
     
 
-    __terlar_git_prompt
-    __fish_hg_prompt
     echo
 
     if not test $last_status -eq 0
