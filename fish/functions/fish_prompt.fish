@@ -16,7 +16,7 @@ function fish_prompt --description 'Write out the prompt'
     #echo -n (prompt_hostname)
     #set_color normal
 
-    echo -n ':  git'
+    echo -n ':  '
     __terlar_git_prompt
     __fish_hg_prompt
 
