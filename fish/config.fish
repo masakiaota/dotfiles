@@ -6,7 +6,8 @@ function py3
     # なぜかMBAにはbinがないのに動く(エラーがうざいので空でmkdirした)
     set PATH $PYENV_ROOT/bin $PATH
     . (pyenv init - | psub); 
-    . (pyenv virtualenv-init - | psub); and python $argv
+    . (pyenv virtualenv-init - | psub); and python -V;
+    which python;
 end
 
 function notebook
