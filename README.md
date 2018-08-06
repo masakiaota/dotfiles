@@ -11,7 +11,7 @@ ln -s ~/dotfiles/vscode/keybindings.json
 ln -s ~/dotfiles/vscode/settings.json
 ```
 
-fishの設定(fish/にあるlink.shで実行可能)
+fishの設定
 ```
 cd ~/.config/
 mv fish/ fish.bak/
