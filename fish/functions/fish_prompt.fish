@@ -43,3 +43,14 @@ function fish_prompt --description 'Write out the prompt'
 
 end
 
+#gitのbranch名出す
+# function git_branch
+#     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
+# end
+
+#右prompt
+function fish_right_prompt
+    echo -n (date "+%H:%M:%S")
+    # echo (git_branch)
+end
+

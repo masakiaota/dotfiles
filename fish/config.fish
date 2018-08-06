@@ -28,21 +28,11 @@ alias rm='rmtrash'
 # -xのオプションがついてる例をよく見るが起動時に読み込まれるから別に永続化させる必要もない
 set LANG ja_JP.UTF-8
 
-#gitのbranch名出す
-function git_branch
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
-end
 
-#右prompt
-function fish_right_prompt
-    echo -n (date "+%H:%M:%S")
-    echo (git_branch)
+cd後にls 
+function cd
+    builtin cd $argv; and ls
 end
-
-# cd後にls 
-# function cd
-#     builtin cd $argv; and ls
-# end
 
 
 # gitがめんどくさいので

@@ -1,6 +1,7 @@
 #
 # The following functions add support for a directory history
 #
+#なんか調子がわるいので無効化、代わりにbuiltin のcdを使う(prevdは使えなくなってしまうが...)
 
 function cd --description "Change directory"
 
