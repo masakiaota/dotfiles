@@ -29,7 +29,7 @@ alias rm='rmtrash'
 set LANG ja_JP.UTF-8
 
 
-cd後にls 
+#cd後にls 
 function cd
     builtin cd $argv; and ls
 end
