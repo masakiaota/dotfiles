@@ -16,6 +16,7 @@ fishの設定(fish/にあるlink.shで実行可能)
 cd ~/.config/
 mv fish/ fish.bak/
 ln -s ~/dotfiles/fish
+cp fish.bak/fishd.* ~/dotfiles/fish/ #既存の設定の継承
 ```
 
 vim
