@@ -1,0 +1,1 @@
+/Users/masaki/.vim/plugged/inkpot/colors/inkpot.vim

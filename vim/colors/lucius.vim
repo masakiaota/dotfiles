@@ -1,0 +1,1 @@
+/Users/masaki/.vim/plugged/vim-lucius/colors/lucius.vim

@@ -1,0 +1,1 @@
+/Users/masaki/.vim/plugged/phd/colors/phd.vim

@@ -1,0 +1,1 @@
+/Users/masaki/.vim/plugged/nord-vim/colors/nord.vim

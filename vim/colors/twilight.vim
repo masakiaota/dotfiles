@@ -1,0 +1,1 @@
+/Users/masaki/.vim/plugged/twilight/colors/twilight.vim

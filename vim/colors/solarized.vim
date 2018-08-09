@@ -1,0 +1,1 @@
+/Users/masaki/.vim/plugged/vim-colors-solarized/colors/solarized.vim
