@@ -1,1 +1,0 @@
-/Users/masaki/.vim/plugged/vim-hybrid/colors/hybrid.vim

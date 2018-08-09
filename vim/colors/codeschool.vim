@@ -1,1 +1,0 @@
-/Users/masaki/.vim/plugged/codeschool-vim-theme/colors/codeschool.vim

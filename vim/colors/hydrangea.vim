@@ -1,1 +1,0 @@
-/Users/masaki/.vim/plugged/hydrangea-vim/colors/hydrangea.vim
