@@ -21,6 +21,13 @@ cp fish.bak/fishd.* ~/dotfiles/fish/ #既存の設定の継承
 
 vim
 ```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ln -s ~/dotfiles/.vimrc
+vim hoge.txt
+```
+vimのなかで
+```
+:PlugInstall
 ```
 
