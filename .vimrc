@@ -23,7 +23,7 @@ set fileencodings=ucs-boms,utf-8,euc-jp,cp932 " 読み込み時の文字コー�
 
 set scrolloff=0
 set laststatus=2                  " 常にステータス行を表示する
-set cmdheight=2                   " hit-enter回数を減らすのが目的
+"set cmdheight=2                   " hit-enter回数を減らすのが目的
 if !has('gui_running')            " gvimではない？ (== 端末)
   set ttimeoutlen=0               " モード変更時の表示更新を最速化
 endif
@@ -32,7 +32,6 @@ set ambiwidth=double              " ○, △, □等の文字幅をASCII文字�
 set directory-=.                  " swapファイルはローカル作成がトラブル少なめ
 set formatoptions+=mM             " 日本語の途中でも折り返す
 let &grepprg="grep -rnIH --exclude=.git --exclude-dir=.hg --exclude-dir=.svn --exclude=tags"
-let loaded_matchparen = 1         " カーソルが括弧上にあっても括弧ペアをハイライトさせない
 
 " " 入力中のコマンドをステータスに表示する
 set showcmd
@@ -96,29 +95,29 @@ set tabstop=4
 set shiftwidth=4
 "-------------------------------------------------------------------------------
 " ステータスライン設定
-let &statusline = "%<%f %m%r%h%w[%{&ff}][%{(&fenc!=''?&fenc:&enc).(&bomb?':bom':'')}] "
-if has('iconv')
-  let &statusline .= "0x%{FencB()}"
+" let &statusline = "%<%f %m%r%h%w[%{&ff}][%{(&fenc!=''?&fenc:&enc).(&bomb?':bom':'')}] "
+" if has('iconv')
+"   let &statusline .= "0x%{FencB()}"
 
-  function! FencB()
-    let c = matchstr(getline('.'), '.', col('.') - 1)
-    if c != ''
-      let c = iconv(c, &enc, &fenc)
-      return s:Byte2hex(s:Str2byte(c))
-    else
-      return '0'
-    endif
-  endfunction
-  function! s:Str2byte(str)
-    return map(range(len(a:str)), 'char2nr(a:str[v:val])')
-  endfunction
-  function! s:Byte2hex(bytes)
-    return join(map(copy(a:bytes), 'printf("%02X", v:val)'), '')
-  endfunction
-else
-  let &statusline .= "0x%B"
-endif
-let &statusline .= "%=%l,%c%V %P"
+"   function! FencB()
+"     let c = matchstr(getline('.'), '.', col('.') - 1)
+"     if c != ''
+"       let c = iconv(c, &enc, &fenc)
+"       return s:Byte2hex(s:Str2byte(c))
+"     else
+"       return '0'
+"     endif
+"   endfunction
+"   function! s:Str2byte(str)
+"     return map(range(len(a:str)), 'char2nr(a:str[v:val])')
+"   endfunction
+"   function! s:Byte2hex(bytes)
+"     return join(map(copy(a:bytes), 'printf("%02X", v:val)'), '')
+"   endfunction
+" else
+"   let &statusline .= "0x%B"
+" endif
+" let &statusline .= "%=%l,%c%V %P"
 
 "-------------------------------------------------------------------------------
 " ファイルエンコーディング検出設定
@@ -190,3 +189,17 @@ noremap <C-[> <ESC>
 noremap! <C-[> <ESC>
 " 保存などを爆速で行いたい
 nnoremap <Space>w :<C-u>write<Cr>
+
+"---------------------------------------------------------------------------
+"vim-plug
+
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+" NEARDTreeのインストール
+Plug 'scrooloose/nerdtree'
+" lightlineのインストール
+Plug 'itchyny/lightline.vim'
+" Initialize plugin system
+call plug#end()
