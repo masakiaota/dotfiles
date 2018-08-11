@@ -32,12 +32,14 @@ set ambiwidth=double              " ○, △, □等の文字幅をASCII文字�
 set directory-=.                  " swapファイルはローカル作成がトラブル少なめ
 set formatoptions+=mM             " 日本語の途中でも折り返す
 let &grepprg="grep -rnIH --exclude=.git --exclude-dir=.hg --exclude-dir=.svn --exclude=tags"
+let loaded_matchparen = 1         " カーソルが括弧上にあっても括弧ペアをハイライトさせない
 
 " " 入力中のコマンドをステータスに表示する
 set showcmd
 " " 編集中のファイルが変更されたら自動で読み直す
 set autoread
-" " バッファが編集中でもその他のファイルを開けるように
+
+syntax enable
 
 
 " " 検索系
@@ -144,7 +146,8 @@ endif
 
 "-------------------------------------------------------------------------------
 " カラースキームの設定
-" colorscheme torte
+set background=dark
+"colorscheme solarized
 
 try
   silent hi CursorIM
