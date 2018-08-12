@@ -99,4 +99,11 @@
         "command": "scrollLineUp",
         "when": "textInputFocus"
     },
+
+    //vimlikeな置換
+    {
+        "key": "ctrl+/",
+        "command": "editor.action.startFindReplaceAction",
+        "when": ""
+    }
 ]
