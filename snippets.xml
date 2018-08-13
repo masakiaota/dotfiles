@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<folders>
+	<folder>
+		<title>shell</title>
+		<snippets>
+			<snippet>
+				<title>ssh to lab</title>
+				<content>ssh -L 8900:localhost:8900 masaki@murata.eb.waseda.ac.jp</content>
+			</snippet>
+			<snippet>
+				<title>ssh8900gratia</title>
+				<content>ssh -L 8900:localhost:8900 gratia</content>
+			</snippet>
+			<snippet>
+				<title>jpy8900</title>
+				<content>jupyter notebook --port 8900</content>
+			</snippet>
+			<snippet>
+				<title>起動中のjupyter</title>
+				<content>jupyter-notebook list</content>
+			</snippet>
+		</snippets>
+	</folder>
+	<folder>
+		<title>Python</title>
+		<snippets>
+			<snippet>
+				<title>basic import</title>
+				<content>import numpy as np
+import pandas as pd
+import _pickle as pickle
+from IPython.display import display
+
+# visualization
+import matplotlib.pyplot as plt
+%matplotlib notebook
+
+import holoviews as hv
+hv.extension(&apos;matplotlib&apos;)
+
+import plotly.offline as py
+import plotly.graph_objs as go
+py.init_notebook_mode()</content>
+			</snippet>
+			<snippet>
+				<title>read_csv</title>
+				<content>df = pd.read_csv(&quot;&quot;)</content>
+			</snippet>
+			<snippet>
+				<title>pickle</title>
+				<content>with open(&quot;filename&quot;, &quot;wb&quot;) as f:
+    pickle.dump(pythonobject, f)</content>
+			</snippet>
+			<snippet>
+				<title>load pickle</title>
+				<content>with open(&quot;filename&quot;, &quot;rb&quot;) as f:
+    pickle.load(f)</content>
+			</snippet>
+		</snippets>
+	</folder>
+	<folder>
+		<title>Tex</title>
+		<snippets>
+			<snippet>
+				<title>\begin{equation}</title>
+				<content>\begin{equation}
+	
+\label{}
+\end{equation}</content>
+			</snippet>
+			<snippet>
+				<title>連続した数式{eqnarray}</title>
+				<content>\begin{eqnarray}
+	数式1左辺 &amp;=&amp; 数式1右辺 \nonumber \\
+	数式2左辺 &amp;=&amp; 数式2右辺
+	\label{}
+\end{eqnarray}</content>
+			</snippet>
+			<snippet>
+				<title>括弧</title>
+				<content>\left( &quot;\{\}とか[]に変えることも可能&quot; \right)</content>
+			</snippet>
+			<snippet>
+				<title>図の挿入</title>
+				<content>\begin{figure}[htbp]
+  \begin{center} %センタリングする
+    \includegraphics[width=10.0cm]{./figure/ファイル名}
+    \caption{タイトル名} %タイトルをつける
+    \label{ラベル} %ラベルをつけ図の参照を可能にする
+  \end{center}
+\end{figure}</content>
+			</snippet>
+			<snippet>
+				<title>表の挿入</title>
+				<content>\begin{table}[htbp]
+  \begin{center}
+    \caption{何かの表}
+    \begin{tabular}{|c|c|c|c|c|} 
+        \hline
+        ユーザー &amp; 映画1 &amp; 映画2 &amp; 映画3 &amp; 映画4 \\ 
+        \hline 
+        A &amp; 5 &amp; 3 &amp;   &amp;  \\
+        B &amp;  &amp; 2 &amp;  &amp; 5 \\
+        C &amp;  &amp;  &amp; 4 &amp; 3 \\ 
+        D &amp; 4 &amp;  &amp; 3 &amp; \\
+        E &amp; 4 &amp; 3 &amp;  &amp; 2\\ 
+        \hline
+    \end{tabular}
+    \label{t1_1}
+  \end{center}
+\end{table}</content>
+			</snippet>
+			<snippet>
+				<title>箇条書き(説明)</title>
+				<content>\begin{description}
+    \item[オブジェクト抽出]
+    \item[ヒストグラム] 標本化では横軸の値を離散化した。量子化では縦軸の値も離散化する。つまりこの過程では縦軸の値を丸め込む。
+    \item[グレイスケール] 量子化された縦軸の値に対応するビットを割り振る。使用するビット数が多いほど細かく縦軸の大きさについて表現できる。例えば2ビットでは縦軸は4段階しか表現できないが、8ビットでは256段階も表現できる。
+    \item[輝度値]
+\end{description}</content>
+			</snippet>
+			<snippet>
+				<title>箇条書き(点)</title>
+				<content>\begin{itemize}
+	\item hogehoge1
+	\item hogehoge2
+\end{itemize}</content>
+			</snippet>
+			<snippet>
+				<title>参考文献</title>
+				<content>\begin{thebibliography}{9}
+	\bibitem{NULL} 早稲田大学 先進理工学部 電気・情報生命工学科, 電気・情報生命工学実験C 2017年度, P165-P180, 2017.
+\end{thebibliography}</content>
+			</snippet>
+		</snippets>
+	</folder>
+</folders>
