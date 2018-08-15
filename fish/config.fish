@@ -1,6 +1,6 @@
 #起動の高速化のため、python3と打ったらデフォルトをpython3に変更。以降pythonで3が起動する。
 #dirは /Users/{ユーザー名}/.config/fish
-function py3
+function p3
     set PYENV_ROOT $HOME/.pyenv 
     
     # なぜかMBAにはbinがないのに動く(エラーがうざいので空でmkdirした)
