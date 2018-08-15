@@ -18,6 +18,16 @@ mv fish/ fish.bak/
 ln -s ~/dotfiles/fish
 cp fish.bak/fishd.* ~/dotfiles/fish/ #既存の設定の継承
 ```
+tmux
+インストールなら
+```
+brew install tmux
+```
+設定の適応
+```
+cd
+ln -s ~/dotfiles/.tmux.conf
+```
 
 vim
 ```
