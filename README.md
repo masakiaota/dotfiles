@@ -4,6 +4,13 @@
 * 必要最低限を意識しろ。
 
 ### 暫くの間のinstall.sh代わり
+いろいろインストール
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" #homebrewのインストール
+brew install fish
+brew install tmux
+brew install 
+```
 codeの設定
 ```
 cd /Users/{ユーザー名}/Library/Application\ Support/Code/User
