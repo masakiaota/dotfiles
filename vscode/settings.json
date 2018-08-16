@@ -34,6 +34,6 @@
     //拡張機能
     "markdown-preview-enhanced.breakOnSingleNewLine": false,
     "python.pythonPath": "/Users/masaki/.pyenv/versions/anaconda3-5.0.0/bin/python",
-
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish"
 
 }
