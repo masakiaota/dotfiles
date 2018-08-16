@@ -49,5 +49,7 @@ alias gpl='git pull'
 #現在のdirをfinderで開く
 alias finder="open ."
 
+# tmux a
+alias ta = "tmux a"
 # 日本語を含むdir名とか深い階層へのアクセスが面倒なので
 set lab ./OneDrive/研究室/
