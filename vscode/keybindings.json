@@ -127,4 +127,14 @@
         "command": "-extension.vim_ctrl+n",
         "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl"
     },
+    {
+        "key": "ctrl+d",
+        "command": "-extension.vim_ctrl+d",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-extension.vim_ctrl+b",
+        "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+    },
 ]
