@@ -18,9 +18,9 @@ ln -s ~/dotfiles/.vimrc
 
 #vscode
 echo "setting vscode..."
-if [ -e /Users/$(whoami)/Library/Application\ Support/Code/User ]; then
+if [ -e ~/Library/Application\ Support/Code/User ]; then
     # 存在する場合
-    cd /Users/$(whoami)/Library/Application\ Support/Code/User
+    cd ~/Library/Application\ Support/Code/User
     ln -s ~/dotfiles/vscode/keybindings.json
     ln -s ~/dotfiles/vscode/settings.json
 else

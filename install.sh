@@ -10,6 +10,7 @@ fi
 brew install fish
 brew install tmux
 brew install reattach-to-user-namespace
+brew install htop
 
 if [ -e ~/.tmux/plugins/tpm ]; then
     # 存在する場合
