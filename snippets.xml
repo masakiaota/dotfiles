@@ -30,6 +30,7 @@
 import pandas as pd
 import _pickle as pickle
 from IPython.display import display
+from pathlib import Path
 
 # visualization
 import matplotlib.pyplot as plt
@@ -41,6 +42,20 @@ hv.extension(&apos;matplotlib&apos;)
 import plotly.offline as py
 import plotly.graph_objs as go
 py.init_notebook_mode()</content>
+			</snippet>
+			<snippet>
+				<title>multiprosess</title>
+				<content>from multiprocessing import Pool
+import multiprocessing as multi
+
+p = Pool(int(multi.cpu_count())/2)
+for i, l in enumerate(p.imap(関数名, 引数のリスト)):
+    #処理
+    if i%50==0:
+        print(i,"/",len(引数のリスト))
+    if l is not None:
+    # 処理を書いたりよしなに
+p.close()</content>
 			</snippet>
 			<snippet>
 				<title>read_csv</title>
