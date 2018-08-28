@@ -82,7 +82,8 @@ set virtualedit=onemore
 " " インデントはスマートインデント
 set smartindent
 " " ビープ音を可視化
-set visualbell
+" " カーソルが重い原因はこいつだった
+" set visualbell
 " " 括弧入力時の対応する括弧を表示
 set showmatch
 
@@ -188,10 +189,12 @@ inoremap <silent> <C-e> <End>
 inoremap <silent> <C-d> <Del>
 " escape遠い
 inoremap <silent> <C-[> <ESC>
+inoremap <silent> <C-m> <ESC>
 noremap <C-[> <ESC>
 noremap! <C-[> <ESC>
 " 保存などを爆速で行いたい
 nnoremap <Space>w :<C-u>write<Cr>
+nnoremap <Space>q :<C-u>quit<Cr>
 
 "---------------------------------------------------------------------------
 "vim-plug
