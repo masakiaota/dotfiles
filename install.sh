@@ -7,7 +7,17 @@ if [ $? -gt 0 ]; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" #homebrewのインストール
 fi
 
-brew install fish
+# python
+brew install python3
+
+# xonsh
+pip3 install xonsh
+pip3 install gnureadline
+pip3 install prompt-toolkit
+
+
+# commnad line tools
+#brew install fish
 brew install tmux
 brew install reattach-to-user-namespace
 brew install htop
