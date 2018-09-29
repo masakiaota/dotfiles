@@ -19,7 +19,8 @@ $AUTO_CD = True
 $SUPPRESS_BRANCH_TIMEOUT_MESSAGE = True
 # キー入力即評価（サイコー）
 $UPDATE_COMPLETIONS_ON_KEYPRESS = True
-
+# コマンド候補を自動で出す
+$AUTO_SUGGEST = True
 # 見た目
 # プロンプトの表記
 $PROMPT = "\n{INTENSE_GREEN}[ {cwd} ] \n{env_name:{} }{user}{WHITE}@{INTENSE_BLUE}{hostname}{WHITE}{branch_color}{curr_branch: {}}\n{NO_COLOR}{BOLD_BLUE}{prompt_end}{NO_COLOR} " 

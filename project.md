@@ -17,6 +17,7 @@ brew install python3
 pip3 install xonsh
 pip3 install gnureadline
 pip3 install prompt-toolkit
+pip3 install pygments
 ```
 でインストール
 ```
