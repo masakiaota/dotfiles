@@ -20,7 +20,7 @@ $SUPPRESS_BRANCH_TIMEOUT_MESSAGE = True
 # キー入力即評価（サイコー）
 $UPDATE_COMPLETIONS_ON_KEYPRESS = True
 # コマンド候補を自動で出す
-$AUTO_SUGGEST = True
+#$AUTO_SUGGEST = True
 # 見た目
 # プロンプトの表記
 $PROMPT = "\n{INTENSE_GREEN}[ {cwd} ] \n{env_name:{} }{user}{WHITE}@{INTENSE_BLUE}{hostname}{WHITE}{branch_color}{curr_branch: {}}\n{NO_COLOR}{BOLD_BLUE}{prompt_end}{NO_COLOR} " 
@@ -34,9 +34,6 @@ $XONSH_COLOR_STYLE = "default"
 # 下部に表示するツールバー
 # prompt-toolkitが導入されているShellのみ
 #$BOTTOM_TOOLBAR
-
-# Shell上のシンタックスハイライト強調表示
-$COLOR_INPUT = True
 
 
 

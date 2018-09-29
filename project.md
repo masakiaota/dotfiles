@@ -26,5 +26,7 @@ brew install xonsh
 でもインストールできるが推奨しない
     - ばんくしさんのサイトを参考に.xonshrcを記載
 
+### 注意みたいな
+- 補完するにはbash-completionを導入する必要あり
 
 
