@@ -7,6 +7,16 @@ mv fish/ fish.bak/
 ln -s ~/dotfiles/fish
 cp fish.bak/fishd.* ~/dotfiles/fish/ #既存の設定の継承
 
+#hyper
+echo "setting hyper..."
+cd
+ln -sf ~/dotfiles/.hyper.js
+
+#xonsh
+echo "setting xonsh..."
+cd
+ln -s ~/dotfiles/.xonshrc
+
 #tmux
 echo "setting tmux..."
 cd
@@ -14,6 +24,7 @@ ln -s ~/dotfiles/.tmux.conf
 
 #vim
 echo "setting vim..."
+cd
 ln -s ~/dotfiles/.vimrc
 
 #vscode
