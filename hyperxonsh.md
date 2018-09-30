@@ -9,8 +9,8 @@ Hyper+xonshでお手軽かつモダンな環境づくり
 - Hyperをインストール
     - hyper i でいくつか拡張機能をインストール
     - textsize変更
-    - デフォルトのshellをxonshに設定はやめたほうがいいかも
-    - xonsh on bashにする
+    - hyperで直接xonshを起動
+
 - xonsh
 ```
 brew install python3
