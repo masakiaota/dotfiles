@@ -71,7 +71,8 @@ module.exports = {
       red: '#C51E14',
       green: '#1DC121',
       yellow: '#C7C329',
-      blue: '#0A2FC4',
+      //blue: '#0A2FC4',
+      blue: '#0880c4',
       magenta: '#C839C5',
       cyan: '#20C5C6',
       white: '#C7C7C7',
@@ -83,6 +84,23 @@ module.exports = {
       lightMagenta: '#FD7CFC',
       lightCyan: '#68FDFE',
       lightWhite: '#FFFFFF',
+    },
+    MaterialTheme: {
+          // Set the theme variant,
+          // OPTIONS: 'Darker', 'Palenight', 'Ocean', ''
+          theme: '',
+ 
+          // [Optional] Set the rgba() app background opacity, useful when enableVibrance is true
+          // OPTIONS: From 0.1 to 1
+          backgroundOpacity: '1',
+ 
+          // [Optional] Set the accent color for the current active tab
+          accentColor: '#64FFDA',
+ 
+          // [Optional] Mac Only. Need restart. Enable the vibrance and blurred background
+          // OPTIONS: 'dark', 'ultra-dark', 'bright'
+          // NOTE: The backgroundOpacity should be between 0.1 and 0.9 to see the effect.
+          vibrancy: ''
     },
     // scroll backs
     // 何行もどれるか
