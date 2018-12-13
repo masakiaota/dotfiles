@@ -2,6 +2,7 @@
 " Vim8用サンプル vimrcを改変
 "
 
+
 "文字コードをUFT-8に設定
 set fenc=utf-8
 set encoding=utf-8
@@ -34,7 +35,7 @@ set formatoptions+=mM             " 日本語の途中でも折り返す
 let &grepprg="grep -rnIH --exclude=.git --exclude-dir=.hg --exclude-dir=.svn --exclude=tags"
 let loaded_matchparen = 1         " カーソルが括弧上にあっても括弧ペアをハイライトさせない
 
-" " 入力中のコマンドをステータスに表示する
+ " 入力中のコマンドをステータスに表示する
 set showcmd
 " " 編集中のファイルが変更されたら自動で読み直す
 set autoread
@@ -82,7 +83,8 @@ set virtualedit=onemore
 " " インデントはスマートインデント
 set smartindent
 " " ビープ音を可視化
-set visualbell
+" " カーソルが重い原因はこいつだった
+" set visualbell
 " " 括弧入力時の対応する括弧を表示
 set showmatch
 
@@ -187,11 +189,10 @@ inoremap <silent> <C-a> <ESC>I
 inoremap <silent> <C-e> <End>
 inoremap <silent> <C-d> <Del>
 " escape遠い
-inoremap <silent> <C-[> <ESC>
-noremap <C-[> <ESC>
-noremap! <C-[> <ESC>
+"inoremap <silent> <C-m> <ESC>
 " 保存などを爆速で行いたい
 nnoremap <Space>w :<C-u>write<Cr>
+nnoremap <Space>q :<C-u>quit<Cr>
 
 "---------------------------------------------------------------------------
 "vim-plug

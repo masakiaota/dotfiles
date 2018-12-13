@@ -7,9 +7,20 @@ if [ $? -gt 0 ]; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" #homebrewのインストール
 fi
 
-brew install fish
+# python
+brew install python3
+
+# xonsh
+pip3 install xonsh
+pip3 install gnureadline
+pip3 install prompt-toolkit
+pip3 install pygments
+
+# commnad line tools
+#brew install fish
 brew install tmux
 brew install reattach-to-user-namespace
+brew install htop
 
 if [ -e ~/.tmux/plugins/tpm ]; then
     # 存在する場合
