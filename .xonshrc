@@ -4,7 +4,7 @@
 # 補完をEnterで直接実行しない
 $COMPLETIONS_CONFIRM = True
 # Ctrl + D で終了しない
-#$IGNOREEOF = True
+$IGNOREEOF = True
 # tabではなく空白4つ
 $INDENT = "    "
 # 補完時に大小区別しない
@@ -20,7 +20,7 @@ $SUPPRESS_BRANCH_TIMEOUT_MESSAGE = True
 # キー入力即評価（サイコー）(でも重い)
 #$UPDATE_COMPLETIONS_ON_KEYPRESS = True
 # コマンド候補を自動で出す
-$AUTO_SUGGEST = False
+#$AUTO_SUGGEST = False
 # 見た目
 # プロンプトの表記
 $PROMPT = "\n{INTENSE_GREEN}[ {cwd} ] \n{env_name:{} }{user}{WHITE}@{INTENSE_BLUE}{hostname}{WHITE}{branch_color}{curr_branch: {}}\n{NO_COLOR}{BOLD_BLUE}{prompt_end}{NO_COLOR} " 
@@ -42,6 +42,7 @@ $XONSH_COLOR_STYLE = "default"
 $PATH=["bin","/usr/local/bin","/usr/bin","/bin","usr/sbin", "/sbin",""]
 # 仮想環境
 xontrib load vox
+vox activate myenv
 # エイリアス
 
 aliases["l"]="ls -a"
