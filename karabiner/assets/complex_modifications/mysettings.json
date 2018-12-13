@@ -166,6 +166,73 @@
                     ]
                 }
             ]
+        },
+        {
+            "description": "Change control + m to escape only if pressed at the same time.",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "m",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "escape"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "back/forward a word by ctrl+,/.",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "comma",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers":[
+                                "left_option"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "period",
+                        "modifiers": {
+                            "mandatory":[
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "left_option"
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
