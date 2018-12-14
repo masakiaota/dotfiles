@@ -29,4 +29,5 @@ brew install xonsh
 ### 注意みたいな
 - 補完するにはbash-completionを導入する必要あり
 
+- [ ] 補完周りのサーベイと有効化
 
