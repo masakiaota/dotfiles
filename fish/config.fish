@@ -55,6 +55,8 @@ alias ta="tmux a"
 # alias ll= "ls -lha"
 # alias la= "ls -a" #これらはデフォでonになってた... 恐るべしfish
 alias l="ls -a"
+alias note="jupyter notebook"
+alias lab="jupyter lab"
 
 # 日本語を含むdir名とか深い階層へのアクセスが面倒なので
 set drive ~/Documents/OneDrive
