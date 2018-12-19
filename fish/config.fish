@@ -55,4 +55,3 @@ alias ta="tmux a"
 set lab ./OneDrive/研究室/
 
 # start xonsh
-xonsh

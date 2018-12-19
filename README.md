@@ -4,13 +4,19 @@
 * 必要最低限を意識しろ。
 
 ### WIP
-大幅改築中
+- [x] labの計算機のデフォルトのshellをbashに変更
+- [x] bashでも使えるようにbashrcを持ってくる。
+  - どの計算機にも入っているbashを基本とする。
+  - fishが入っている場合にはbashからfishを起動
+  - fishが入っていない場合にはxonshの起動を試みる。
+- [ ] shell scriptのなかでDarwinとLinuxで分離するようにしよう
+- [ ] fish.configの見直し
+  - [ ] hostがほしい
+- [ ] ディレクトリ構造の見直し
+- [ ] install.shとlink.shはソフトごとに別々にファイルを書いてそれを読み込む用にしよう(xcode周りが入ってないと一発じゃ入れられないので)
 
 ### 手順
-- [ ] shell script or xonsh scriptのなかでDarwinとLinuxで分離するようにしよう
 環境はmacを想定している
-
-- [ ] install.shとlink.shはソフトごとに別々にファイルを書いてそれを読み込む用にしよう(xcode周りが入ってないと一発じゃ入れられないので)
 
 ```
 cd 
