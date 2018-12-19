@@ -6,14 +6,30 @@
 ### WIP
 - [x] labの計算機のデフォルトのshellをbashに変更
 - [x] bashでも使えるようにbashrcを持ってくる。
-  - どの計算機にも入っているbashを基本とする。
-  - fishが入っている場合にはbashからfishを起動
-  - fishが入っていない場合にはxonshの起動を試みる。
-- [ ] shell scriptのなかでDarwinとLinuxで分離するようにしよう
+  - [x]どの計算機にも入っているbashを基本とする。
+  - [x]fishが入っている場合にはbashからfishを起動
+  - [x]fishが入っていない場合にはxonshの起動を試みる。
 - [ ] fish.configの見直し
   - [ ] hostがほしい
+- [ ] itermの設定のバックアップ取れない？
 - [ ] ディレクトリ構造の見直し
+- [ ] shell scriptのなかでDarwinとLinuxで分離するようにしよう
 - [ ] install.shとlink.shはソフトごとに別々にファイルを書いてそれを読み込む用にしよう(xcode周りが入ってないと一発じゃ入れられないので)
+
+### 使っているもの
+- mac
+  - tree
+  - rmtrash
+  - git(macにもともと入っているが脆弱性があるため最新版)
+  - fish
+  - htop
+  - tmux
+  - pyenv
+  - wget
+  - autossh(あんま使ってないけど)
+
+- ubuntu
+  - 管理者権限がないので基本的にありあわせ  
 
 ### 手順
 環境はmacを想定している

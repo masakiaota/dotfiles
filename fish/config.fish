@@ -1,23 +1,24 @@
-#起動の高速化のため、python3と打ったらデフォルトをpython3に変更。以降pythonで3が起動する。
 #dirは /Users/{ユーザー名}/.config/fish
-function p3
-    set PYENV_ROOT $HOME/.pyenv 
-    
-    # なぜかMBAにはbinがないのに動く(エラーがうざいので空でmkdirした)
-    set PATH $PYENV_ROOT/bin $PATH
-    . (pyenv init - | psub); 
-    . (pyenv virtualenv-init - | psub); and python -V;
-    which python;
-end
 
-function notebook
-    set PYENV_ROOT $HOME/.pyenv 
-    
-    # なぜかMBAにはbinがないのに動く(エラーがうざいので空でmkdirした)
-    set PATH $PYENV_ROOT/bin $PATH
-    . (pyenv init - | psub); 
-    . (pyenv virtualenv-init - | psub); and jupyter notebook $argv
-end
+#bash経由で起動するようにするのでここらへんの設定が不要になった
+#起動の高速化のため、python3と打ったらデフォルトをpython3に変更。以降pythonで3が起動する。
+# function p3
+#     set PYENV_ROOT $HOME/.pyenv
+
+#     # なぜかMBAにはbinがないのに動く(エラーがうざいので空でmkdirした)
+#     set PATH $PYENV_ROOT/bin $PATH
+#     . (pyenv init - | psub);
+#     . (pyenv virtualenv-init - | psub); and python -V;
+#     which python;
+# end
+
+# function notebook
+#     set PYENV_ROOT $HOME/.pyenv
+#     # なぜかMBAにはbinがないのに動く(エラーがうざいので空でmkdirした)
+#     set PATH $PYENV_ROOT/bin $PATH
+#     . (pyenv init - | psub);
+#     . (pyenv virtualenv-init - | psub); and jupyter notebook $argv
+# end
 
 
 ## rmでゴミ箱に入れる
@@ -29,15 +30,14 @@ alias rm='rmtrash'
 set LANG ja_JP.UTF-8
 
 
-#cd後にls 
-function cd
-    builtin cd $argv; and ls
-end
+#cd後にls
+# function cd
+#     builtin cd $argv; and ls
+# end
 
 
 # gitがめんどくさいので
 function gitlazy
-    git add .;
     git commit -m "$argv";
     git push;
 end
@@ -49,9 +49,13 @@ alias gpl='git pull'
 #現在のdirをfinderで開く
 alias finder="open ."
 
-# tmux a
-alias ta="tmux a"
-# 日本語を含むdir名とか深い階層へのアクセスが面倒なので
-set lab ./OneDrive/研究室/
 
-# start xonsh
+# alias
+alias ta="tmux a"
+# alias ll= "ls -lha"
+# alias la= "ls -a" #これらはデフォでonになってた... 恐るべしfish
+alias l="ls -a"
+
+# 日本語を含むdir名とか深い階層へのアクセスが面倒なので
+set drive ~/Documents/OneDrive
+
