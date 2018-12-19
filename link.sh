@@ -1,11 +1,19 @@
 #!/bin/sh
 
+#bashの設定
+echo "setting bash"
+cd
+mv .bashrc bashrc.old
+ln -s ~dotfiles/.bashrc
+
 #fishの設定
 echo "setting fish..."
 cd ~/.config/
 mv fish/ fish.bak/
-ln -s ~/dotfiles/fish
-cp fish.bak/fishd.* ~/dotfiles/fish/ #既存の設定の継承
+mkdir fish; cd fish
+ln -s ~/dotfiles/fish/config.fish
+ln -s ~/dotfiles/fish/functions
+# cp fish.bak/fishd.* ~/dotfiles/fish/ #既存の設定の継承
 
 #hyper
 echo "setting hyper..."
