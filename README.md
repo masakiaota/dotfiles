@@ -62,6 +62,10 @@ prefix(ctrl g)＋U(shift u)
 詳しい操作は 
 https://github.com/tmux-plugins/tpm
 
+### Python環境
+重いがなんやかんやpyenvで使うものごと切り替えるのが便利。
+anacondaを入れるとpipする手間が省けたりして楽。(しかも実行速度も早いらしい？)
+
 ### ディレクトリの説明
 - bash
   - .bashrc ... 本体
