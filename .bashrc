@@ -8,7 +8,7 @@ PS1="\n[\u@\h]
 
 if [ "$(uname)" == "Darwin" ]; then
     echo "your OS is "$OSTYPE
-    source ~/dotfiles/bash/bash_mac
+    source ~/dotfiles/bash/mac.bash
 fi
 
 
