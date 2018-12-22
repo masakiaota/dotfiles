@@ -1,1 +1,0 @@
-/Users/masaki/dotfiles/fish/config.fish
