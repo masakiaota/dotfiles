@@ -9,11 +9,11 @@
   - [x]どの計算機にも入っているbashを基本とする。
   - [x]fishが入っている場合にはbashからfishを起動
   - [x]fishが入っていない場合にはxonshの起動を試みる。
-- [ ] fish.configの見直し
-  - [ ] hostがほしい
+- [x] fish.configの見直し
+  - [ ] hostがほしい(なんのことだっけ)
 - [ ] itermの設定のバックアップ取れない？
 - [ ] ディレクトリ構造の見直し
-- [ ] shell scriptのなかでDarwinとLinuxで分離するようにしよう
+- [x] shell scriptのなかでDarwinとLinuxで分離するようにしよう
 - [ ] link.shのメンテ(ln -sは一つのファイルでいい)分けるとかえって面倒
 - [ ] install.shとlink.shはソフトごとに別々にファイルを書いてそれを読み込む用にしよう(xcode周りが入ってないと一発じゃ入れられないので)
 
@@ -39,7 +39,7 @@
 cd 
 git clone https://github.com/masakiaota/dotfiles.git
 cd ./dotfiles/
-sh install.sh
+#sh install.sh
 sh link.sh
 ```
 最後の仕上げに行く
@@ -61,3 +61,5 @@ prefix(ctrl g)＋U(shift u)
 
 詳しい操作は 
 https://github.com/tmux-plugins/tpm
+
+### ディレクトリの説明

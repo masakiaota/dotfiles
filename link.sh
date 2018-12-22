@@ -4,7 +4,7 @@
 echo "setting bash"
 cd
 mv .bashrc bashrc.old
-ln -s ~dotfiles/.bashrc
+ln -s ~/dotfiles/bash/.bashrc
 
 #fishの設定
 echo "setting fish..."
@@ -16,9 +16,9 @@ ln -s ~/dotfiles/fish/functions
 # cp fish.bak/fishd.* ~/dotfiles/fish/ #既存の設定の継承
 
 #hyper
-echo "setting hyper..."
-cd
-ln -sf ~/dotfiles/.hyper.js
+# echo "setting hyper..."
+# cd
+# ln -sf ~/dotfiles/.hyper.js
 
 #xonsh
 echo "setting xonsh..."
