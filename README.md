@@ -63,3 +63,18 @@ prefix(ctrl g)＋U(shift u)
 https://github.com/tmux-plugins/tpm
 
 ### ディレクトリの説明
+- bash
+  - .bashrc ... 本体
+  - mac.bash ... mac用の設定
+- fish ... 本来.config以下にある
+  - functions ... こいつごとlinkしてる
+  - config.fish ... 本体
+- karabiner ... 本来.config以下にある
+  - オレオレキーバインドが設定できる
+- vscode
+- .gitignore ... あんま使ってなくてそもそもリンクさせてない…
+- .hyper.js
+- .tmux.conf
+- .vimrc
+- .xonshrc ... fishがないサーバーではxonshを使う
+- snippets.xml ... Clipyのsnippetsだがいまいち管理できてない
