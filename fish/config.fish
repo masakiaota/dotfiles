@@ -21,10 +21,6 @@
 # end
 
 
-## rmでゴミ箱に入れる
-## brew install rmtrash
-alias rm='rmtrash'
-
 # encoding
 # -xのオプションがついてる例をよく見るが起動時に読み込まれるから別に永続化させる必要もない
 set LANG ja_JP.UTF-8
@@ -35,6 +31,10 @@ set LANG ja_JP.UTF-8
 #     builtin cd $argv; and ls
 # end
 
+# alias
+## rmでゴミ箱に入れる
+## brew install rmtrash
+alias rm='rmtrash'
 
 # gitがめんどくさいので
 function gitlazy
