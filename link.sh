@@ -25,9 +25,7 @@ echo
 
 #fishの設定
 echo "setting fish..."
-cd ~/.config/
-mv fish/ fish.bak/
-mkdir fish; cd fish
+cd ~/.config/fish
 ln -s ~/dotfiles/fish/config.fish
 ln -s ~/dotfiles/fish/functions
 # cp fish.bak/fishd.* ~/dotfiles/fish/ #既存の設定の継承
