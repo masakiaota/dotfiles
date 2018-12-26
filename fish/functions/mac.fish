@@ -21,7 +21,7 @@
 #alias
 ## rmでゴミ箱に入れる
 ## brew install rmtrash
-alias rm='rmtrash'
+alias rmt='rmtrash'
 
 #現在のdirをfinderで開く
 alias finder="open ."
