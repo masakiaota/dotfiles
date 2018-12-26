@@ -6,10 +6,30 @@ PS1="\n[\u@\h]
 \W
 \$ "
 
-if [ "$(uname)" == "Darwin" ]; then
-    echo "your OS is "$OSTYPE
+
+# OSで条件分岐
+case "$OSTYPE" in
+  darwin*)
+    echo "OSX"
     source ~/dotfiles/bash/mac.bash
-fi
+    # forlab
+    source ~/.lab.bash
+    ;; 
+  linux*)
+    echo "LINUX"
+    source ~/dotfiles/bash/linux.bash
+    ;;
+  bsd*)     echo "BSD" ;;
+  msys*)    echo "WINDOWS" ;;
+  *)        echo "unknown: $OSTYPE" ;;
+esac
+
+
+
+# if [ "$(uname)" == "Darwin" ]; then
+#     echo "your OS is "$OSTYPE
+#     source ~/dotfiles/bash/mac.bash
+# fi
 
 
 echo "starting fish"
