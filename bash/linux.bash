@@ -9,5 +9,5 @@ if [ -d ${PYENV_ROOT} ]; then
   fi
 fi
 
-echo "pyenv activate ubuntu"
-pyenv activate ubuntu
+echo "pyenv activate anaconda3-4.3.1 for ubuntu"
+pyenv activate anaconda3-4.3.1
