@@ -236,6 +236,9 @@
                         "modifiers": {
                             "mandatory": [
                                 "control"
+                            ],
+                            "optional": [
+                                "any"
                             ]
                         }
                     },
@@ -244,6 +247,9 @@
                             "key_code": "left_arrow",
                             "modifiers":[
                                 "left_option"
+                            ],
+                            "optional": [
+                                "any"
                             ]
                         }
                     ]
@@ -255,6 +261,9 @@
                         "modifiers": {
                             "mandatory":[
                                 "control"
+                            ],
+                            "optional": [
+                                "any"
                             ]
                         }
                     },
@@ -263,6 +272,9 @@
                             "key_code": "right_arrow",
                             "modifiers": [
                                 "left_option"
+                            ],
+                            "optional": [
+                                "any"
                             ]
                         }
                     ]
