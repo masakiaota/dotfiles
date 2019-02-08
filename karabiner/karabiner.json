@@ -134,7 +134,7 @@
                                 "to": [
                                     {
                                         "key_code": "left_command",
-                                        "lazy": true
+                                        "lazy": false
                                     }
                                 ],
                                 "to_if_alone": [
@@ -156,7 +156,7 @@
                                 "to": [
                                     {
                                         "key_code": "right_command",
-                                        "lazy": true
+                                        "lazy": false
                                     }
                                 ],
                                 "to_if_alone": [
