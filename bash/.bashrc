@@ -47,11 +47,11 @@ esac
 #     source ~/dotfiles/bash/mac.bash
 # fi
 
-#コンパイラがうまく動かなかったときに記述した
-export CC=gcc-8
-export CXX=gcc-8
-export ARCHFLAGS="-arch x86_64"
-alias gcc=gcc-8
-alias g++=g++-8
+# #コンパイラがうまく動かなかったときに記述した
+# export CC=gcc-8
+# export CXX=gcc-8
+# export ARCHFLAGS="-arch x86_64"
+# alias gcc=gcc-8
+# alias g++=g++-8
 
 
