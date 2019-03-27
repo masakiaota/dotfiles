@@ -66,6 +66,11 @@ https://github.com/tmux-plugins/tpm
 重いがなんやかんやpyenvで使うものごと切り替えるのが便利。
 anacondaを入れるとpipする手間が省けたりして楽。(しかも実行速度も早いらしい？)
 
+### shell環境
+bashからfishを呼び出してる
+- [ ] tarballをコンパイルして、sudo なしでもinstallできるようにしたい
+
+
 ### ディレクトリの説明
 - bash
   - .bashrc ... 本体
