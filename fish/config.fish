@@ -34,7 +34,7 @@ switch (uname)
 case Darwin
     source ~/dotfiles/fish/functions/mac.fish
 case Linux
-    echo Linux is not set preference
+    source ~/dotfiles/fish/functions/linux.fish
 case FreeBSD NetBSD DragonFly
     echo BSD is not set preference
 case '*'
