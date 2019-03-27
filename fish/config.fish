@@ -27,6 +27,7 @@ alias ta="tmux a"
 alias l="ls -a"
 alias note="jupyter notebook"
 alias lab="jupyter lab"
+alias q="exit"
 
 # OS enveronment
 echo OS is (uname)
