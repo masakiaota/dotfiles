@@ -5,7 +5,7 @@ case $- in
     *i*)#インタラクティブモードの処理をこの中に書く。
         #まずはfishやxonshの起動を試みる。
         echo "starting fish"
-        if ! fish; then
+        if ! exec fish; then
             echo "fish is not installed. starting xonsh"
             xonsh
         fi
