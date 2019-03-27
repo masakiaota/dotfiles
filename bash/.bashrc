@@ -1,10 +1,26 @@
 # エイリアスやシェル関数を定義するためのもの
 export LANG=ja_JP.UTF-8
 
-#プロンプトの見た目を見やすくする
+case $- in
+    *i*)#インタラクティブモードの処理をこの中に書く。
+        #まずはfishやxonshの起動を試みる。
+        echo "starting fish"
+        if ! fish; then
+            echo "fish is not installed. starting xonsh"
+            xonsh
+        fi
+        reset
+        #プロンプトの見た目を見やすくする
 PS1="\n[\u@\h]
 \W
 \$ "
+
+
+        ;;
+      #*) return;;
+esac
+
+
 
 
 # OSで条件分岐
@@ -31,11 +47,11 @@ esac
 #     source ~/dotfiles/bash/mac.bash
 # fi
 
+#コンパイラがうまく動かなかったときに記述した
+export CC=gcc-8
+export CXX=gcc-8
+export ARCHFLAGS="-arch x86_64"
+alias gcc=gcc-8
+alias g++=g++-8
 
-echo "starting fish"
-if ! fish; then
-    "fish is not installed. starting xonsh"
-    xonsh
-fi
-#echo "starting xonsh..."
-#xonsh
+
