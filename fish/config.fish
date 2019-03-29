@@ -28,6 +28,8 @@ alias l="ls -a"
 alias note="jupyter notebook"
 alias lab="jupyter lab"
 alias q="exit"
+alias gits="git status"
+alias gitd="git diff"
 
 # OS enveronment
 echo OS is (uname)
