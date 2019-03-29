@@ -6,6 +6,8 @@
 ### WIP
 - [ ] 基本的にroot権限がなくてもインストールできるようにする
     - [ ] homebrew, linuxbrewはホームディレクトリにパスを通す
+    - https://docs.brew.sh/Homebrew-on-Linux
+    - http://kikkii.hatenablog.com/entry/2017/12/19/121605 (?)
 - [x] labの計算機のデフォルトのshellをbashに変更
 - [x] bashでも使えるようにbashrcを持ってくる。
   - [x]どの計算機にも入っているbashを基本とする。
