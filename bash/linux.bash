@@ -1,9 +1,8 @@
-#pyenv
-
-
+export PATH=$PATH:/home/lab/masaki/.linuxbrew/bin
 case $- in
     *i*)#インタラクティブモードの処理をこの中に書く。
 
+        #pyenv
         echo "starting pyenv"
         export PYENV_ROOT="$HOME/.pyenv"
         if [ -d ${PYENV_ROOT} ]; then

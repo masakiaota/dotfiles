@@ -11,7 +11,6 @@ case $- in
         else
             echo "fish is not exist!" #コマンドが存在しないときの処理
         fi
-        reset
         #プロンプトの見た目を見やすくする
 PS1="\n[\u@\h]
 \W
