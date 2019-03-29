@@ -5,9 +5,11 @@ case $- in
     *i*)#インタラクティブモードの処理をこの中に書く。
         #まずはfishやxonshの起動を試みる。
         echo "starting fish"
-        if ! exec fish; then
-            echo "fish is not installed. starting xonsh"
-            xonsh
+        if type "fish" > /dev/null 2>&1; then
+            #コマンドが存在する時の処理
+            exec fish
+        else
+            echo "fish is not exist!" #コマンドが存在しないときの処理
         fi
         reset
         #プロンプトの見た目を見やすくする
