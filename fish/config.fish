@@ -34,6 +34,8 @@ echo OS is (uname)
 switch (uname)
 case Darwin
     source ~/dotfiles/fish/functions/mac.fish
+    # forlab
+    source ~/.lab.fish
 case Linux
     source ~/dotfiles/fish/functions/linux.fish
 case FreeBSD NetBSD DragonFly
