@@ -8,7 +8,7 @@ set fenc=utf-8
 set encoding=utf-8
 scriptencoding utf-8
 set fileencoding=utf-8 " 保存時の文字コード
-set fileencodings=ucs-boms,utf-8,euc-jp,cp932 " 読み込み時の文字コードの自動判別. 左側が優先される
+set fileencodings=utf-8,ucs-boms,euc-jp " 読み込み時の文字コードの自動判別. 左側が優先される
 
 " 推奨設定の読み込み (:h defaults.vim) 推奨設定が見つからねぇのでオフにしておく
 "unlet! skip_defaults_vim
@@ -125,26 +125,26 @@ set shiftwidth=4
 
 "-------------------------------------------------------------------------------
 " ファイルエンコーディング検出設定
-let &fileencoding = &encoding
-if has('iconv')
-  if &encoding ==# 'utf-8'
-    let &fileencodings = 'iso-2022-jp,euc-jp,cp932,' . &fileencodings
-  else
-    let &fileencodings .= ',iso-2022-jp,utf-8,ucs-2le,ucs-2,euc-jp'
-  endif
-endif
-" 日本語を含まないファイルのエンコーディングは encoding と同じにする
-if has('autocmd')
-  function! AU_ReSetting_Fenc()
-    if &fileencoding =~# 'iso-2022-jp' && search("[^\x01-\x7e]", 'n') == 0
-      let &fileencoding = &encoding
-    endif
-  endfunction
-  augroup resetting_fenc
-    autocmd!
-    autocmd BufReadPost * call AU_ReSetting_Fenc()
-  augroup END
-endif
+"let &fileencoding = &encoding
+"if has('iconv')
+"  if &encoding ==# 'utf-8'
+"    let &fileencodings = 'iso-2022-jp,euc-jp,cp932,' . &fileencodings
+"  else
+"    let &fileencodings .= ',iso-2022-jp,utf-8,ucs-2le,ucs-2,euc-jp'
+"  endif
+"endif
+"" 日本語を含まないファイルのエンコーディングは encoding と同じにする
+"if has('autocmd')
+"  function! AU_ReSetting_Fenc()
+"    if &fileencoding =~# 'iso-2022-jp' && search("[^\x01-\x7e]", 'n') == 0
+"      let &fileencoding = &encoding
+"    endif
+"  endfunction
+"  augroup resetting_fenc
+"    autocmd!
+"    autocmd BufReadPost * call AU_ReSetting_Fenc()
+"  augroup END
+"endif
 
 "-------------------------------------------------------------------------------
 " カラースキームの設定
