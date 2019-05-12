@@ -109,7 +109,7 @@
             ]
         },
         {
-            "description": "Change control + m to escape only if pressed at the same time.",
+            "description": "Change control + m to escape only if pressed at the same time. and toggle to english",
             "manipulators": [
                 {
                     "type": "basic",
@@ -118,15 +118,15 @@
                         "modifiers": {
                             "mandatory": [
                                 "control"
-                            ],
-                            "optional": [
-                                "any"
                             ]
                         }
                     },
                     "to": [
                         {
                             "key_code": "escape"
+                        },
+                        {
+                            "key_code": "japanese_eisuu"
                         }
                     ]
                 }
@@ -276,6 +276,55 @@
                             "optional": [
                                 "any"
                             ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "シフトキーを単体で押したときに、英数・かなキーを送信する。（左シフトキーは英数、右シフトキーはかな） (rev 2)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_shift",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_shift",
+                            "lazy": true
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_shift",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_shift",
+                            "lazy": true
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "japanese_kana"
                         }
                     ]
                 }
