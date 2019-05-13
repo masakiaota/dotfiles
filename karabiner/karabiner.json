@@ -156,48 +156,36 @@
                         ]
                     },
                     {
-                        "description": "シフトキーを単体で押したときに、英数・かなキーを送信する。（左シフトキーは英数、右シフトキーはかな） (rev 2)",
+                        "description": "ctrl+j→toggle japanese, ctrl+u →toggle english",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "left_shift",
+                                    "key_code": "j",
                                     "modifiers": {
-                                        "optional": [
-                                            "any"
+                                        "mandatory": [
+                                            "control"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_shift",
-                                        "lazy": true
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "japanese_eisuu"
+                                        "key_code": "japanese_kana"
                                     }
                                 ],
                                 "type": "basic"
                             },
                             {
                                 "from": {
-                                    "key_code": "right_shift",
+                                    "key_code": "u",
                                     "modifiers": {
-                                        "optional": [
-                                            "any"
+                                        "mandatory": [
+                                            "control"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_shift",
-                                        "lazy": true
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "japanese_kana"
+                                        "key_code": "japanese_eisuu"
                                     }
                                 ],
                                 "type": "basic"
