@@ -1,8 +1,8 @@
 # エイリアスやシェル関数を定義するためのもの
 export LANG=ja_JP.UTF-8
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    export PATH=$PATH:/home/lab/masaki/.linuxbrew/bin
-fi
+#if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    #export PATH=$PATH:/home/lab/masaki/.linuxbrew/bin
+#fi
 
 case $- in
     *i*)#インタラクティブモードの処理をこの中に書く。

@@ -1,4 +1,4 @@
-set -x PATH /home/lab/masaki/.linuxbrew/bin $PATH
+#set -x PATH /home/lab/masaki/.linuxbrew/bin $PATH
 #本当はintaractiveモードのときだけ実行するというふうに書いたほうがいいのだろうが。
 set -x PYENV_ROOT $HOME/.pyenv
 
