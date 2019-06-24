@@ -9,6 +9,7 @@ set -x PATH $PYENV_ROOT/bin $PATH
 echo 'your python env is'
 pyenv versions;
 
+set -x PATH /usr/local/bin /usr/local/sbin $PATH
 
 #alias
 ## rmでゴミ箱に入れる
