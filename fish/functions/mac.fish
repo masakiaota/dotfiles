@@ -21,3 +21,8 @@ alias finder="open ."
 
 # 日本語を含むdir名とか深い階層へのアクセスが面倒なので
 set drive ~/Documents/OneDrive
+
+
+# kaggle kernel docker
+alias kaggle_lab='docker run -v $PWD:/tmp/working -w=/tmp/working -p 8888:8888 --rm -it gcr.io/kaggle-images/python:v61  jupyter lab --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working --allow-root'
+alias kaggle_ipy='docker run -v $PWD:/tmp/working -w=/tmp/working --rm -it gcr.io/kaggle-images/python:v61 ipython'
