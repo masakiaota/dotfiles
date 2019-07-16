@@ -24,5 +24,5 @@ set drive ~/Documents/OneDrive
 
 
 # kaggle kernel docker
-alias kaggle_lab='docker run -v $PWD:/tmp/working -w=/tmp/working -p 8888:8888 --rm -it gcr.io/kaggle-images/python:v61  jupyter lab --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working --allow-root'
-alias kaggle_ipy='docker run -v $PWD:/tmp/working -w=/tmp/working --rm -it gcr.io/kaggle-images/python:v61 ipython'
+alias lab_kaggle='docker run -v $PWD:/tmp/working -w=/tmp/working -p 8888:8888 --rm -it masakiaota/python_from_kaggle  jupyter lab --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working --allow-root'
+alias ipy_kaggle='docker run -v $PWD:/tmp/working -w=/tmp/working --rm -it masakiaota/python_from_kaggle ipython'
