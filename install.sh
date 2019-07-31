@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/ homebrewのときに勝手に入るしわざわざ指定しなくても良さそう
+# xcode-select --install
+
 
 brew -v
 if [ $? -gt 0 ]; then
@@ -11,7 +14,7 @@ fi
 brew install fish tmux tree htop reattach-to-user-namespace pyenv wget bat docker rmtrash
 
 # install application
-brew cask install google-chrome docker station typora slack visual-studio-code google-japanese-ime onedrive karabiner-elements marp cacher hyperswitch cheatsheet sourcetree
+brew cask install sourcetree karabiner-elements google-chrome alfred iterm2 docker station typora slack visual-studio-code google-japanese-ime onedrive marp cacher hyperswitch cheatsheet 
 
 ## python
 #brew install python3
