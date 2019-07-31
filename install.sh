@@ -14,7 +14,7 @@ fi
 brew install fish tmux tree htop reattach-to-user-namespace pyenv wget bat docker rmtrash
 
 # install application
-brew cask install sourcetree karabiner-elements google-chrome alfred iterm2 docker station typora slack visual-studio-code google-japanese-ime onedrive marp cacher hyperswitch cheatsheet 
+brew cask install sourcetree karabiner-elements google-chrome alfred iterm2 docker station typora slack visual-studio-code google-japanese-ime onedrive marp cacher hyperswitch cheatsheet mathpix-snipping-tool
 
 ## python
 #brew install python3
