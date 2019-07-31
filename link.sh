@@ -19,7 +19,9 @@ echo
 echo "setting bash"
 cd
 mv .bashrc bashrc.old
+mv .bash_profile bash_profile.old
 ln -s ~/dotfiles/bash/.bashrc
+ln -s ~/dotfiles/bash/.bash_profile
 
 echo
 
