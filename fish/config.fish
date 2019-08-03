@@ -30,6 +30,10 @@ alias lab="jupyter lab"
 alias q="exit"
 alias gits="git status"
 alias gitd="git diff"
+alias gita="git add"
+alias gs="git status"
+alias gd="git diff"
+alias ga="git add"
 
 # OS enveronment
 echo OS is (uname)
