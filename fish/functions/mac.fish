@@ -28,9 +28,9 @@ alias ipy_kaggle='docker run -v $PWD:/tmp/working -w=/tmp/working --rm -it masak
 
 function lab_kaggle --description "you can specify port by argument"
     if test $argv[1]
-        docker run -v $PWD:/tmp/working -w=/tmp/working -p $argv[1]:8888 --rm -it masakiaota/python_from_kaggle  jupyter lab --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working --allow-root
+        docker run --shm-size=2048m -v $PWD:/tmp/working -w=/tmp/working -p $argv[1]:8888 --rm -it masakiaota/python_from_kaggle  jupyter lab --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working --allow-root
     else
-        docker run -v $PWD:/tmp/working -w=/tmp/working -p 8888:8888 --rm -it masakiaota/python_from_kaggle  jupyter lab --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working --allow-root
+        docker run --shm-size=2048m -v $PWD:/tmp/working -w=/tmp/working -p 8888:8888 --rm -it masakiaota/python_from_kaggle  jupyter lab --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working --allow-root
     end
 end
 
