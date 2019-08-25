@@ -72,8 +72,13 @@ anacondaを入れるとpipする手間が省けたりして楽。(しかも実�
 
 ### shell環境
 bashからfishを呼び出してる
-- [ ] tarballをコンパイルして、sudo なしでもinstallできるようにしたい
 
+### Macの環境
+```
+# カーソルの高速化
+defaults write -g InitialKeyRepeat -int 18
+defaults write -g KeyRepeat -float 1.2
+```
 
 ### ディレクトリの説明
 - bash
