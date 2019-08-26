@@ -8,6 +8,6 @@ RUN conda install -y graphviz pygraphviz &&\
     pip install . &&\
     jupyter notebook --generate-config &&\
     echo "c.NotebookApp.token = 'asdf'" >> /root/.jupyter/jupyter_notebook_config.py &&\
-    apt-get install -y fish
+    apt-get install -y fish htop
 
 
