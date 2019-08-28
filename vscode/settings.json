@@ -28,7 +28,6 @@
     //拡張機能
     "markdown-preview-enhanced.breakOnSingleNewLine": false,
     "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-    "window.zoomLevel": 0,
     "git.autofetch": true,
     "editor.minimap.enabled": false
 }
