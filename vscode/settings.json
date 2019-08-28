@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 15.5,
+    "editor.fontSize": 14,
     "editor.renderControlCharacters": true,
     // ファイルを保存するときにフォーマットしてください。フォーマッタを使用可能にして、ファイルを自動保存せず、エディターをシャットダウンしないでください。
     "editor.formatOnSave": true,
@@ -22,18 +22,13 @@
     //	"boundary" : 単語間の単一スペースのみ非表示、以外はすべて表示
     "editor.renderWhitespace": "all",
     "editor.renderLineHighlight": "all",
-    // Controls the line height. Use 0 to compute the lineHeight from the fontSize.
-    "editor.lineHeight": 24,
-    // ミニマップの表示文字をブロックに変更,
-    "editor.minimap.renderCharacters": false, 
-    // ミニマップのスライダーを自動的に非表示にするかどうかを制御します。
-    "editor.minimap.showSlider": "always",
     //テーマ
     "workbench.colorTheme": "Monokai Dimmed",
     "git.enableSmartCommit": true,
     //拡張機能
     "markdown-preview-enhanced.breakOnSingleNewLine": false,
-    "python.pythonPath": "/Users/masaki/.pyenv/versions/anaconda3-5.0.0/bin/python",
-    "terminal.integrated.shell.osx": "/usr/local/bin/fish"
-
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "window.zoomLevel": 0,
+    "git.autofetch": true,
+    "editor.minimap.enabled": false
 }
