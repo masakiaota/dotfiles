@@ -7,12 +7,6 @@
     "editor.formatOnType": true,
     // 貼り付けた内容がエディターにより自動的にフォーマットされるかどうかを制御します。フォーマッタを使用可能にする必要があります。また、フォーマッタがドキュメント内の範囲をフォーマットできなければなりません。
     "editor.formatOnPaste": true,
-    // 行の折り返し方法を制御します。次の値を指定できます。
-    //  - 'off' (折り返さない),
-    //  - 'on' (ビューポート折り返し),
-    //  - 'wordWrapColumn' ('editor.wordWrapColumn' で折り返し) or
-    //  - 'bounded' (ビューポートと 'editor.wordWrapColumn' の最小値で折り返し).
-    "editor.wordWrap": "on",
     // 以下のように文字列を追加します。
     //"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
     "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。「」（）；：・？＜＞＋－＊／｛｝｜～＆％＄＃”！’　にをはがのとも",
@@ -29,5 +23,7 @@
     "markdown-preview-enhanced.breakOnSingleNewLine": false,
     "terminal.integrated.shell.osx": "/usr/local/bin/fish",
     "git.autofetch": true,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000
 }
