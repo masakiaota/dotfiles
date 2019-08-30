@@ -16,8 +16,6 @@
     //	"boundary" : 単語間の単一スペースのみ非表示、以外はすべて表示
     "editor.renderWhitespace": "all",
     "editor.renderLineHighlight": "all",
-    //テーマ
-    "workbench.colorTheme": "Monokai Dimmed",
     "git.enableSmartCommit": true,
     //拡張機能
     "markdown-preview-enhanced.breakOnSingleNewLine": false,
