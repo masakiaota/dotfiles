@@ -15,6 +15,9 @@ brew install fish tmux tree htop reattach-to-user-namespace pyenv wget bat docke
 
 # install application
 brew cask install sourcetree karabiner-elements google-chrome alfred iterm2 docker station typora slack visual-studio-code google-japanese-ime onedrive marp cacher hyperswitch cheatsheet mathpix-snipping-tool clipy mendeley
+# あんま使わないと思うけどmactexも
+# brew cask install mactex
+# 詳しくはhttps://texwiki.texjp.org/?TeX%20Live%2FMac#texlive-install-brew
 
 ## python
 #brew install python3
