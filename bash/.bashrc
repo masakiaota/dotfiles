@@ -14,17 +14,14 @@ case $- in
         else
             echo "fish is not exist!" #コマンドが存在しないときの処理
         fi
-        #プロンプトの見た目を見やすくする
-PS1="\n[\u@\h]
-\W
-\$ "
-
-
         ;;
       #*) return;;
 esac
 
-
+#プロンプトの見た目を見やすくする
+PS1="\n[\u@\h]
+\W
+\$ "
 
 
 # OSで条件分岐
