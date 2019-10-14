@@ -20,6 +20,9 @@
     //拡張機能
     "markdown-preview-enhanced.breakOnSingleNewLine": false,
     "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "terminal.integrated.env.osx": {
+        "PATH": "/usr/local/bin:${env:PATH}"
+    },
     "git.autofetch": true,
     "editor.minimap.enabled": false,
     "files.autoSave": "afterDelay",
