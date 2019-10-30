@@ -26,5 +26,10 @@
     "git.autofetch": true,
     "editor.minimap.enabled": false,
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 5000
+    "files.autoSaveDelay": 5000,
+    "editor.cursorSurroundingLines": 8,
+    "python.formatting.autopep8Args": [
+        "--ignore",
+        "E402"
+    ]
 }
