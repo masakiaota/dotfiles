@@ -27,7 +27,7 @@
     "editor.minimap.enabled": false,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 5000,
-    "editor.cursorSurroundingLines": 8,
+    "editor.cursorSurroundingLines": 5,
     "python.formatting.autopep8Args": [
         "--ignore",
         "E402"
