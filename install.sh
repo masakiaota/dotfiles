@@ -14,7 +14,7 @@ fi
 brew install fish tmux tree htop reattach-to-user-namespace pyenv wget bat docker rmtrash
 
 # install application
-brew cask install sourcetree karabiner-elements google-chrome alfred iterm2 docker station typora slack visual-studio-code google-japanese-ime onedrive cacher hyperswitch cheatsheet mathpix-snipping-tool clipy mendeley-desktop
+brew cask install visual-studio-code sourcetree karabiner-elements google-chrome alfred iterm2 docker station typora slack visual-studio-code google-japanese-ime onedrive cacher hyperswitch cheatsheet mathpix-snipping-tool clipy mendeley-desktop
 # あんま使わないと思うけどmactexも
 # brew cask install mactex
 # 詳しくはhttps://texwiki.texjp.org/?TeX%20Live%2FMac#texlive-install-brew
