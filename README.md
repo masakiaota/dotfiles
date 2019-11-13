@@ -80,6 +80,12 @@ defaults write -g InitialKeyRepeat -int 18
 defaults write -g KeyRepeat -float 1.2
 ```
 
+### docker
+```
+docker build -t masakiaota/python_from_kaggle .
+```
+
+
 ### ディレクトリの説明
 - bash
   - .bashrc ... 本体
