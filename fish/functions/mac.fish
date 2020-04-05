@@ -10,11 +10,36 @@ echo 'your python env is'
 pyenv versions;
 
 set -x PATH /usr/local/bin /usr/local/sbin $PATH
+set -x PATH ~/.local/bin $PATH #online-judge-tools用
 
 #alias
 ## rmでゴミ箱に入れる
 ## brew install rmtrash
 alias rmt='rmtrash'
+
+# AtCoder用
+# alias ojd='rmtrash test/; oj d'
+
+function mkcode
+    mkdir $argv; and\
+    cd $argv; and\
+    touch $argv.py
+end
+
+function ojt
+    oj t -c "python $argv"; and\
+    echo 'あってるっぽい！'
+end
+
+function sub_by_pypy
+    oj t -c "python $argv"; and\
+    oj s -l 3510 -y -w 0 $argv 
+end
+
+function sub_by_python
+    oj t -c "python $argv"; and\
+    oj s -l 3023 -y -w 0 $argv 
+end
 
 #現在のdirをfinderで開く
 alias finder="open ."
