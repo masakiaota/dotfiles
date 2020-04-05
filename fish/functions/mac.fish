@@ -21,9 +21,10 @@ alias rmt='rmtrash'
 # alias ojd='rmtrash test/; oj d'
 
 function mkcode
-    mkdir $argv; and\
-    cd $argv; and\
-    touch $argv.py
+    for arg in $argv
+        mkdir $arg; and\
+        touch $arg/$arg.py
+    end
 end
 
 function ojt
