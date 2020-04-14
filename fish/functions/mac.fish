@@ -1,4 +1,8 @@
 
+
+set -x PATH /usr/local/bin /usr/local/sbin $PATH
+set -x PATH ~/.local/bin $PATH #online-judge-tools用
+
 #本当はintaractiveモードのときだけ実行するというふうに書いたほうがいいのだろうが。
 set -x PYENV_ROOT $HOME/.pyenv
 
@@ -8,9 +12,6 @@ set -x PATH $PYENV_ROOT/bin $PATH
 . (pyenv virtualenv-init - | psub);
 echo 'your python env is'
 pyenv versions;
-
-set -x PATH /usr/local/bin /usr/local/sbin $PATH
-set -x PATH ~/.local/bin $PATH #online-judge-tools用
 
 #alias
 ## rmでゴミ箱に入れる
