@@ -1,5 +1,7 @@
 #環境変数
 export PATH="/bin/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 
 function pyenv_init(){
         #pyenv

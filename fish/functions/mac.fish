@@ -2,6 +2,7 @@
 
 set -x PATH /usr/local/bin /usr/local/sbin $PATH
 set -x PATH ~/.local/bin $PATH #online-judge-tools用
+set -x PATH ~/.nodebrew/current/bin:$PATH
 
 #本当はintaractiveモードのときだけ実行するというふうに書いたほうがいいのだろうが。
 set -x PYENV_ROOT $HOME/.pyenv
