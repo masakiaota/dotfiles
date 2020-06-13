@@ -67,3 +67,7 @@ function lab_kaggle --description "you can specify port by argument"
     end
 end
 
+function strun_kaggle --description "you should specify port by argument ex)strun_kaggle 7777 hello.py"
+    docker run --shm-size=2048m -v $PWD:/tmp/working -w=/tmp/working -p $argv[1]:8501 --rm -it masakiaota/python_from_kaggle streamlit run $argv[2]
+end
+
