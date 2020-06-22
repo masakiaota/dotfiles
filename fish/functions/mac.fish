@@ -34,20 +34,20 @@ function ojt
     echo 'あってるっぽい！'
 end
 
-function sub_by_pypy
-    oj t -c "python $argv"; and\
-    oj s -l 3510 -y -w 0 $argv 
-end
+# function sub_by_pypy
+#     oj t -c "python $argv"; and\
+#     oj s -l 3510 -y -w 0 $argv 
+# end
 
 function sub_pypy
     oj t -c "python $argv"; and\
     oj s -l 4047 -y -w 0 $argv 
 end
 
-function sub_by_python
-    oj t -c "python $argv"; and\
-    oj s -l 3023 -y -w 0 $argv 
-end
+# function sub_by_python
+#     oj t -c "python $argv"; and\
+#     oj s -l 3023 -y -w 0 $argv 
+# end
 
 #現在のdirをfinderで開く
 alias finder="open ."
