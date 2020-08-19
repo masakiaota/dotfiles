@@ -49,6 +49,12 @@ end
 #     oj s -l 3023 -y -w 0 $argv 
 # end
 
+function run_cython
+    set stem (string split ".pyx" "" $argv); and\
+    cythonize -3 -i $argv > /dev/null ; and\
+    python -c "import $stem"
+end
+
 #現在のdirをfinderで開く
 alias finder="open ."
 
