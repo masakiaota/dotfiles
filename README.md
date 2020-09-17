@@ -83,6 +83,7 @@ defaults write -g KeyRepeat -float 1.2
 ### docker
 ```
 docker build -t masakiaota/python_from_kaggle .
+docker build -t masakiaota/jupyter_datascience .
 ```
 
 
