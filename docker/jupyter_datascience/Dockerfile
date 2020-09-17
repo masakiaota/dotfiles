@@ -5,9 +5,6 @@ RUN yes | bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
 
 RUN conda install --quiet --yes --freeze-installed -c conda-forge jupyterlab=2.2.0
 
-# pip install系
-RUN pip install --upgrade jupyter-kite
-
 # jupyter系の設定
 RUN jupyter labextension install --no-build @jupyterlab/toc @lckr/jupyterlab_variableinspector @kiteco/jupyterlab-kite &&\
     jupyter lab build --dev-build=False --minimize=True
@@ -15,6 +12,11 @@ RUN jupyter labextension install --no-build @jupyterlab/toc @lckr/jupyterlab_var
 #passwordの無効化
 RUN echo "c.NotebookApp.token = ''\nc.NotebookApp.password = ''" >> /home/jovyan/.jupyter/jupyter_notebook_config.py
 
+# pip install系
+RUN pip install --upgrade jupyter-kite &&\
+    pip install japanize-matplotlib dtreeviz lifelines &&\
+    pip install streamlit &&\
+    pip install --upgrade protobuf
 
 #passの回避
 USER root
