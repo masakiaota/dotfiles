@@ -16,7 +16,9 @@ RUN echo "c.NotebookApp.token = ''\nc.NotebookApp.password = ''" >> /home/jovyan
 RUN pip install --upgrade jupyter-kite &&\
     pip install japanize-matplotlib dtreeviz lifelines &&\
     pip install streamlit &&\
-    pip install --upgrade protobuf
+    pip install --upgrade protobuf &&\
+    pip install lightgbm
+
 
 #passの回避
 USER root
