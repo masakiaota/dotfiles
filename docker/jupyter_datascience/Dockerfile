@@ -16,7 +16,7 @@ RUN echo "c.NotebookApp.token = '' ; c.NotebookApp.password = ''" >> /home/jovya
 
 # pip install系
 RUN pip install --upgrade jupyter-kite &&\
-    pip install japanize-matplotlib dtreeviz lifelines &&\
+    pip install japanize-matplotlib dtreeviz lifelines tabulate&&\
     pip install streamlit &&\
     pip install --upgrade protobuf &&\
     pip install lightgbm
