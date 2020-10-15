@@ -21,7 +21,6 @@ RUN pip install --upgrade jupyter-kite &&\
     pip install --upgrade protobuf &&\
     pip install lightgbm
 
-
 #passの回避
 USER root
 # apt-get系
@@ -29,6 +28,8 @@ RUN apt-get update &&\
     apt-get install -y fish htop
 USER jovyan
 
+RUN pip install --upgrade jax jaxlib
+# RUN pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
 # 以下実行しなくてもまあ困らんので...
 # RUN conda clean --all -f -y &&\
