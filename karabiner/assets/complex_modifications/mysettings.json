@@ -240,6 +240,30 @@
             ]
         },
         {
+            "description": "Change right_command + m to escape only if pressed at the same time. and toggle to english",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "m",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "escape"
+                        },
+                        {
+                            "key_code": "japanese_eisuu"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "description": "Swap - and =",
             "manipulators": [
                 {
