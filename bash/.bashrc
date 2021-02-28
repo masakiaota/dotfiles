@@ -1,5 +1,7 @@
 # エイリアスやシェル関数を定義するためのもの
 export LANG=ja_JP.UTF-8
+eval $(/opt/homebrew/bin/brew shellenv) # homebrewにpathを通す M1macにbrewをインストールしたときに設定
+
 #if [[ "$OSTYPE" == "linux-gnu" ]]; then
     #export PATH=$PATH:/home/lab/masaki/.linuxbrew/bin
 #fi
