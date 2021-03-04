@@ -11,12 +11,13 @@ if [ $? -gt 0 ]; then
 fi
 
 # commnad line tools
-brew install fish tmux tree htop reattach-to-user-namespace pyenv wget bat docker rmtrash
+brew install fish tmux tree htop reattach-to-user-namespace pyenv wget bat docker #rmtrash #rmtrash無くなった疑惑
 
 # install application
-brew cask install visual-studio-code sourcetree karabiner-elements google-chrome alfred iterm2 docker station typora slack visual-studio-code google-japanese-ime onedrive cacher hyperswitch cheatsheet mathpix-snipping-tool clipy mendeley-desktop
-# あんま使わないと思うけどmactexも
-# brew cask install mactex
+brew install --cask visual-studio-code karabiner-elements google-chrome iterm2 docker station slack google-japanese-ime onedrive hyperswitch cheatsheet mathpix-snipping-tool clipy mendeley-desktop
+
+# とりあえずインストールしないかもしれないやつら
+# brew install --cask cacher mendeley-desktop mactex
 # 詳しくはhttps://texwiki.texjp.org/?TeX%20Live%2FMac#texlive-install-brew
 
 ## python
