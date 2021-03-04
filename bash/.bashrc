@@ -2,6 +2,13 @@
 export LANG=ja_JP.UTF-8
 eval $(/opt/homebrew/bin/brew shellenv) # homebrewにpathを通す M1macにbrewをインストールしたときに設定
 
+# brewでpyenv 入れたときに書けと言われた
+# For compilers to find readline you may need to set:
+export LDFLAGS="-L/opt/homebrew/opt/readline/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/readline/include"
+# For pkg-config to find readline you may need to set:
+export PKG_CONFIG_PATH="/opt/homebrew/opt/readline/lib/pkgconfig"
+
 #if [[ "$OSTYPE" == "linux-gnu" ]]; then
     #export PATH=$PATH:/home/lab/masaki/.linuxbrew/bin
 #fi
