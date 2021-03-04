@@ -4,10 +4,6 @@
 * 必要最低限を意識しろ。
 
 ### WIP
-- [ ] 基本的にroot権限がなくてもインストールできるようにする
-    - [ ] homebrew, linuxbrewはホームディレクトリにパスを通す
-    - https://docs.brew.sh/Homebrew-on-Linux
-    - http://kikkii.hatenablog.com/entry/2017/12/19/121605 (?)
 - [x] labの計算機のデフォルトのshellをbashに変更
 - [x] bashでも使えるようにbashrcを持ってくる。
   - [x]どの計算機にも入っているbashを基本とする。
@@ -15,7 +11,6 @@
   - [x]fishが入っていない場合にはxonshの起動を試みる。
 - [x] fish.configの見直し
   - [ ] hostがほしい(なんのことだっけ)
-- [ ] itermの設定のバックアップ取れない？
 - [ ] ディレクトリ構造の見直し
 - [x] shell scriptのなかでDarwinとLinuxで分離するようにしよう
 - [ ] link.shのメンテ(ln -sは一つのファイルでいい)分けるとかえって面倒
@@ -31,7 +26,6 @@
   - tmux
   - pyenv
   - wget
-  - autossh(あんま使ってないけど)
 
 - ubuntu
   - 管理者権限がないので基本的にありあわせ  
