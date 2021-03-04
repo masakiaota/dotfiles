@@ -7,7 +7,7 @@
 brew -v
 if [ $? -gt 0 ]; then
     echo "homebrew does not exit"
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" #homebrewのインストール
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" #homebrewのインストール
 fi
 
 # commnad line tools
