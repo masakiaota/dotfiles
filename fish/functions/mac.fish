@@ -75,9 +75,9 @@ end
 
 function lab_docker --description "you can specify port by argument"
     if test $argv[1]
-        docker run --security-opt seccomp=unconfined --shm-size=2048m -v $PWD:/tmp/working -w=/tmp/working -p $argv[1]:8888 --rm -it masakiaota/jupyter_datascience jupyter lab --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working --allow-root
+        docker run --shm-size=2048m -v $PWD:/tmp/working -w=/tmp/working -p $argv[1]:8888 --rm -it masakiaota/jupyter_datascience jupyter lab --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working --allow-root
     else
-        docker run --security-opt seccomp=unconfined --shm-size=2048m -v $PWD:/tmp/working -w=/tmp/working -p 8888:8888 --rm -it masakiaota/jupyter_datascience  jupyter lab --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working --allow-root
+        docker run  --shm-size=2048m -v $PWD:/tmp/working -w=/tmp/working -p 8888:8888 --rm -it masakiaota/jupyter_datascience  jupyter lab --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working --allow-root
     end
 end
 
