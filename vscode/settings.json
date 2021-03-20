@@ -19,10 +19,7 @@
     "git.enableSmartCommit": true,
     //拡張機能
     "markdown-preview-enhanced.breakOnSingleNewLine": false,
-    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-    // "terminal.integrated.env.osx": {
-    //     "PATH": "/usr/local/bin:${env:PATH}"
-    // }, //なぜかこれをつけるとsshできない
+    "terminal.integrated.shell.osx": "/bin/bash",
     "git.autofetch": true,
     "editor.minimap.enabled": false,
     "files.autoSave": "afterDelay",
