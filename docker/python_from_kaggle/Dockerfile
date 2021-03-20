@@ -26,6 +26,10 @@ RUN pip install japanize-matplotlib dtreeviz lifelines pandarallel&&\
     # cd sklearn-hierarchical-classification &&\
     # pip install . &&\
 
+RUN pip install ipywidgets &&\
+    jupyter nbextension enable --py widgetsnbextension &&\
+    jupyter labextension install @jupyter-widgets/jupyterlab-manager
+
 #RUN pip install jupyter-kite &&\
 #    jupyter labextension install "@kiteco/jupyterlab-kite"
 
