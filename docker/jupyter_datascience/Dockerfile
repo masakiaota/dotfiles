@@ -34,6 +34,8 @@ RUN pip install --upgrade tqdm joblib
 
 RUN pip install --upgrade jax jaxlib
 
+RUN pip install gspread gspread-dataframe
+
 # pytorchはいらないかな?
 # RUN pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
