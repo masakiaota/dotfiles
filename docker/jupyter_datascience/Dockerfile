@@ -36,8 +36,13 @@ RUN pip install --upgrade jax jaxlib
 
 RUN pip install gspread gspread-dataframe
 
+
 # pytorchはいらないかな?
 # RUN pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+
+
+# R系のinstall
+RUN R -e "install.packages('tidyverse', repos = 'http://cran.us.r-project.org')"
 
 # 以下実行しなくてもまあ困らんので...
 # RUN conda clean --all -f -y &&\
