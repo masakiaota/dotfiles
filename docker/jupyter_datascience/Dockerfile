@@ -42,7 +42,11 @@ RUN pip install gspread gspread-dataframe
 
 
 # R系のinstall
-RUN R -e "install.packages('tidyverse', repos = 'http://cran.us.r-project.org')"
+RUN R -e "install.packages('tidyverse', repos = 'http://cran.us.r-project.org')" &&\
+    R -e "install.packages('broom', repos = 'http://cran.us.r-project.org')" &&\
+    R -e "install.packages('devtools', repos = 'http://cran.us.r-project.org')" &&\
+    R -e "devtools::install_github('itamarcaspi/experimentdatar')"
+
 
 # 以下実行しなくてもまあ困らんので...
 # RUN conda clean --all -f -y &&\
