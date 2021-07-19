@@ -1,6 +1,6 @@
 # FROM jupyter/datascience-notebook@sha256:73a577b006b496e1a1c02f5be432f4aab969c456881c4789e0df77c89a0a60c2
 # FROM jupyter/datascience-notebook:lab-2.2.8
-FROM jupyter/datascience-notebook:lab-3.0.7
+FROM jupyter/datascience-notebook:lab-3.0.16
 
 SHELL ["/bin/bash", "-l", "-c"]
 
@@ -45,7 +45,16 @@ RUN pip install gspread gspread-dataframe
 RUN R -e "install.packages('tidyverse', repos = 'http://cran.us.r-project.org')" &&\
     R -e "install.packages('broom', repos = 'http://cran.us.r-project.org')" &&\
     R -e "install.packages('devtools', repos = 'http://cran.us.r-project.org')" &&\
-    R -e "devtools::install_github('itamarcaspi/experimentdatar')"
+    R -e "devtools::install_github('itamarcaspi/experimentdatar')" &&\
+    R -e "install.packages('MatchIt', repos = 'http://cran.us.r-project.org')" &&\
+    R -e "install.packages('WeightIt', repos = 'http://cran.us.r-project.org')" &&\
+    R -e "install.packages('cobalt', repos = 'http://cran.us.r-project.org')" &&\
+    R -e "install.packages('Matching', repos = 'http://cran.us.r-project.org')" &&\
+    R -e "install.packages('Ecdat', repos = 'http://cran.us.r-project.org')" &&\
+    R -e "install.packages('CausalImpact', repos = 'http://cran.us.r-project.org')" &&\
+    R -e "install.packages('rddtools', repos = 'http://cran.us.r-project.org')" &&\
+    R -e "install.packages('haven', repos = 'http://cran.us.r-project.org')"
+
 
 
 # 以下実行しなくてもまあ困らんので...
