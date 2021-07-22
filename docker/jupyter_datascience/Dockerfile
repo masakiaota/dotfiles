@@ -25,19 +25,16 @@ RUN jupyter labextension install --no-build @jupyterlab/toc &&\
 RUN echo "c.NotebookApp.token = '' ; c.NotebookApp.password = ''" >> /home/jovyan/.jupyter/jupyter_notebook_config.py
 
 # pip install系
-RUN pip install --upgrade japanize-matplotlib dtreeviz lifelines tabulate&&\
+RUN pip install --upgrade japanize-matplotlib dtreeviz lifelines tabulate tqdm joblib&&\
     pip install streamlit &&\
     pip install --upgrade protobuf &&\
-    pip install lightgbm
+    pip install lightgbm &&\
+    pip install gspread gspread-dataframe &&\
+    pip install --upgrade jax jaxlib
 
-RUN pip install --upgrade tqdm joblib 
+RUN pip install opencv-python
 
-RUN pip install --upgrade jax jaxlib
-
-RUN pip install gspread gspread-dataframe
-
-
-# pytorchはいらないかな?
+# jaxあるしpytorchはいらないかな?
 # RUN pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
 
