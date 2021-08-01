@@ -15,11 +15,11 @@ USER jovyan
 
 # RUN conda install --quiet --yes --freeze-installed -c conda-forge jupyterlab=2.2.0
 
-# jupyter系の設定
-RUN jupyter labextension install --no-build @jupyterlab/toc &&\
-    # jupyter labextension install --no-build @lckr/jupyterlab_variableinspector @kiteco/jupyterlab-kite &&\
-    # jupyter labextension install --no-build 他のなんかの拡張入れようかね
-    jupyter lab build --dev-build=False --minimize=True
+# # jupyter系の設定 #なぜかtocのinstallでコケるので一旦コメントアウトした
+# RUN jupyter labextension install --no-build @jupyterlab/toc &&\
+#     # jupyter labextension install --no-build @lckr/jupyterlab_variableinspector @kiteco/jupyterlab-kite &&\
+#     # jupyter labextension install --no-build 他のなんかの拡張入れようかね
+#     jupyter lab build --dev-build=False --minimize=True
 
 #passwordの無効化
 RUN echo "c.NotebookApp.token = '' ; c.NotebookApp.password = ''" >> /home/jovyan/.jupyter/jupyter_notebook_config.py
@@ -49,6 +49,7 @@ RUN R -e "install.packages('tidyverse', repos = 'http://cran.us.r-project.org')"
     R -e "install.packages('Matching', repos = 'http://cran.us.r-project.org')" &&\
     R -e "install.packages('Ecdat', repos = 'http://cran.us.r-project.org')" &&\
     R -e "install.packages('CausalImpact', repos = 'http://cran.us.r-project.org')" &&\
+    R -e "install.packages('miceadds', repos = 'http://cran.us.r-project.org')" &&\
     R -e "install.packages('rddtools', repos = 'http://cran.us.r-project.org')" &&\
     R -e "install.packages('haven', repos = 'http://cran.us.r-project.org')"
 
