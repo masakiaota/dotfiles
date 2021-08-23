@@ -11,15 +11,12 @@ RUN apt-get update &&\
     apt-get install -y fish htop
 USER jovyan
 
-# RUN yes | bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)" #kite is heavy...
 
-# RUN conda install --quiet --yes --freeze-installed -c conda-forge jupyterlab=2.2.0
+RUN conda install --quiet --yes --freeze-installed -c conda-forge jupyterlab=3.1.1
 
 # # jupyter系の設定 #なぜかtocのinstallでコケるので一旦コメントアウトした
-# RUN jupyter labextension install --no-build @jupyterlab/toc &&\
-#     # jupyter labextension install --no-build @lckr/jupyterlab_variableinspector @kiteco/jupyterlab-kite &&\
-#     # jupyter labextension install --no-build 他のなんかの拡張入れようかね
-#     jupyter lab build --dev-build=False --minimize=True
+RUN jupyter labextension install --no-build @jupyterlab/toc &&\
+    jupyter lab build --dev-build=False --minimize=True
 
 #passwordの無効化
 RUN echo "c.NotebookApp.token = '' ; c.NotebookApp.password = ''" >> /home/jovyan/.jupyter/jupyter_notebook_config.py
