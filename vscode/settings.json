@@ -28,5 +28,6 @@
     "python.formatting.autopep8Args": [
         "--ignore",
         "E402"
-    ]
+    ],
+    "terminal.integrated.inheritEnv": false
 }
