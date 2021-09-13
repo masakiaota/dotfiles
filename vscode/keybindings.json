@@ -137,5 +137,15 @@
     {
         "key": "ctrl+k",
         "command": "deleteAllRight"
+    },
+    {
+        "key": "shift+m",
+        "command": "notebook.cell.joinBelow",
+        "when": "notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "-notebook.cell.joinBelow",
+        "when": "notebookEditorFocused"
     }
 ]
