@@ -87,18 +87,8 @@
         "when": "textInputFocus"
     },
     {
-        "key": "ctrl+j",
-        "command": "scrollLineDown",
-        "when": "textInputFocus"
-    },
-    {
         "key": "cmd+down",
         "command": "scrollPageDown",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "scrollLineUp",
         "when": "textInputFocus"
     },
     //vimlikeな置換
@@ -143,4 +133,9 @@
         "command": "extension.vim_ctrl+[",
         "when": "editorTextFocus && vim.active && vim.use<C-[> && !inDebugRepl"
     },
+    //ctrl kで行の最後まで削除
+    {
+        "key": "ctrl+k",
+        "command": "deleteAllRight"
+    }
 ]
