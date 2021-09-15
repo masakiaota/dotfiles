@@ -141,7 +141,7 @@
     {
         "key": "shift+m",
         "command": "notebook.cell.joinBelow",
-        "when": "notebookEditorFocused"
+        "when": "notebookEditorFocused && !inputFocus"
     },
     {
         "key": "ctrl+alt+j",
