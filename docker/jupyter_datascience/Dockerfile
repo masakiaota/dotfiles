@@ -29,26 +29,31 @@ RUN pip install --upgrade japanize-matplotlib dtreeviz lifelines tabulate tqdm j
     pip install gspread gspread-dataframe &&\
     pip install --upgrade jax jaxlib
 
-RUN pip install opencv-python
+# ml_design_bookをやる上で入れた すぐ消す
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+RUN rm requirements.txt
 
 # jaxあるしpytorchはいらないかな?
 # RUN pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
+# すぐに入れ直すよ
+# RUN pip install opencv-python
 
-# R系のinstall
-RUN R -e "install.packages('tidyverse', repos = 'http://cran.us.r-project.org')" &&\
-    R -e "install.packages('broom', repos = 'http://cran.us.r-project.org')" &&\
-    R -e "install.packages('devtools', repos = 'http://cran.us.r-project.org')" &&\
-    R -e "devtools::install_github('itamarcaspi/experimentdatar')" &&\
-    R -e "install.packages('MatchIt', repos = 'http://cran.us.r-project.org')" &&\
-    R -e "install.packages('WeightIt', repos = 'http://cran.us.r-project.org')" &&\
-    R -e "install.packages('cobalt', repos = 'http://cran.us.r-project.org')" &&\
-    R -e "install.packages('Matching', repos = 'http://cran.us.r-project.org')" &&\
-    R -e "install.packages('Ecdat', repos = 'http://cran.us.r-project.org')" &&\
-    R -e "install.packages('CausalImpact', repos = 'http://cran.us.r-project.org')" &&\
-    R -e "install.packages('miceadds', repos = 'http://cran.us.r-project.org')" &&\
-    R -e "install.packages('rddtools', repos = 'http://cran.us.r-project.org')" &&\
-    R -e "install.packages('haven', repos = 'http://cran.us.r-project.org')"
+# # R系のinstall #アホみたいにめっちゃ時間かかるのでとりあえずコメントアウト
+# RUN R -e "install.packages('tidyverse', repos = 'http://cran.us.r-project.org')" &&\
+#     R -e "install.packages('broom', repos = 'http://cran.us.r-project.org')" &&\
+#     R -e "install.packages('devtools', repos = 'http://cran.us.r-project.org')" &&\
+#     R -e "devtools::install_github('itamarcaspi/experimentdatar')" &&\
+#     R -e "install.packages('MatchIt', repos = 'http://cran.us.r-project.org')" &&\
+#     R -e "install.packages('WeightIt', repos = 'http://cran.us.r-project.org')" &&\
+#     R -e "install.packages('cobalt', repos = 'http://cran.us.r-project.org')" &&\
+#     R -e "install.packages('Matching', repos = 'http://cran.us.r-project.org')" &&\
+#     R -e "install.packages('Ecdat', repos = 'http://cran.us.r-project.org')" &&\
+#     R -e "install.packages('CausalImpact', repos = 'http://cran.us.r-project.org')" &&\
+#     R -e "install.packages('miceadds', repos = 'http://cran.us.r-project.org')" &&\
+#     R -e "install.packages('rddtools', repos = 'http://cran.us.r-project.org')" &&\
+#     R -e "install.packages('haven', repos = 'http://cran.us.r-project.org')"
 
 
 
