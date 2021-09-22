@@ -4,13 +4,12 @@ set -x PATH /usr/local/bin /usr/local/sbin $PATH
 set -x PATH ~/.local/bin $PATH #online-judge-tools用
 set -x PATH ~/.nodebrew/current/bin:$PATH
 
-#本当はintaractiveモードのときだけ実行するというふうに書いたほうがいいのだろうが。
-set -x PYENV_ROOT $HOME/.pyenv
 
-# なぜかMBAにはbinがないのに動く(エラーがうざいので空でmkdirした)
-set -x PATH $PYENV_ROOT/bin $PATH
-. (pyenv init - | psub);
-. (pyenv virtualenv-init - | psub);
+# fishのupdateにともないpathを通すおまじないは以下の文言になりました。
+set -x PYENV_ROOT $HOME/.pyenv
+set -x fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+pyenv init --path | source
+
 echo 'your python env is'
 pyenv versions;
 
