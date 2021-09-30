@@ -22,7 +22,7 @@ RUN jupyter labextension install --no-build @jupyterlab/toc &&\
 RUN echo "c.NotebookApp.token = '' ; c.NotebookApp.password = ''" >> /home/jovyan/.jupyter/jupyter_notebook_config.py
 
 # pip install系
-RUN pip install --upgrade japanize-matplotlib dtreeviz lifelines tabulate tqdm joblib&&\
+RUN pip install --upgrade japanize-matplotlib dtreeviz lifelines tabulate tqdm joblib autopep8 &&\
     pip install streamlit &&\
     pip install --upgrade protobuf &&\
     pip install lightgbm &&\
