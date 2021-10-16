@@ -583,6 +583,27 @@
                     ]
                 }
             ]
+        },
+        {
+            "description": "ctrl+h→delete_or_backspace key",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "h",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_or_backspace"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
