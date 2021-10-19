@@ -135,10 +135,6 @@
     },
     //ctrl kで行の最後まで削除
     {
-        "key": "ctrl+k",
-        "command": "deleteAllRight"
-    },
-    {
         "key": "shift+m",
         "command": "notebook.cell.joinBelow",
         "when": "notebookEditorFocused && !inputFocus"
@@ -147,5 +143,10 @@
         "key": "ctrl+alt+j",
         "command": "-notebook.cell.joinBelow",
         "when": "notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "-extension.vim_ctrl+k",
+        "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
     }
 ]
