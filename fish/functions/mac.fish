@@ -9,6 +9,7 @@ set -x PATH ~/.nodebrew/current/bin:$PATH
 set -x PYENV_ROOT $HOME/.pyenv
 set -x fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 pyenv init --path | source
+pyenv init - | source #なんか上だけだとできないときもあるため
 
 echo 'your python env is'
 pyenv versions;
