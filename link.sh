@@ -38,11 +38,11 @@ echo
 # cd
 # ln -sf ~/dotfiles/.hyper.js
 
-echo
-#xonsh
-echo "setting xonsh..."
-cd
-ln -s ~/dotfiles/.xonshrc
+# echo
+# #xonsh
+# echo "setting xonsh..."
+# cd
+# ln -s ~/dotfiles/.xonshrc
 
 echo
 

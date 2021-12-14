@@ -14,7 +14,7 @@ fi
 brew install fish tmux tree htop reattach-to-user-namespace pyenv wget bat docker #rmtrash #rmtrash無くなった疑惑
 
 # install application
-brew install --cask visual-studio-code karabiner-elements google-chrome iterm2 docker station slack google-japanese-ime onedrive hyperswitch cheatsheet mathpix-snipping-tool clipy mendeley-desktop
+brew install --cask visual-studio-code karabiner-elements google-chrome iterm2 docker slack cheatsheet clipy notion
 
 # とりあえずインストールしないかもしれないやつら
 # brew install --cask cacher mendeley-desktop mactex

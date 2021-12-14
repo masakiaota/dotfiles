@@ -14,9 +14,9 @@ USER jovyan
 
 RUN conda install --quiet --yes --freeze-installed -c conda-forge jupyterlab=3.1.1
 
-# # jupyter系の設定 #なぜかtocのinstallでコケるので一旦コメントアウトした
-RUN jupyter labextension install --no-build @jupyterlab/toc &&\
-    jupyter lab build --dev-build=False --minimize=True
+# # # jupyter系の設定 #なぜかtocのinstallでコケるので一旦コメントアウトした
+# RUN jupyter labextension install --no-build @jupyterlab/toc &&\
+#     jupyter lab build --dev-build=False --minimize=True
 
 #passwordの無効化
 RUN echo "c.NotebookApp.token = '' ; c.NotebookApp.password = ''" >> /home/jovyan/.jupyter/jupyter_notebook_config.py
@@ -29,10 +29,10 @@ RUN pip install --upgrade japanize-matplotlib dtreeviz lifelines tabulate tqdm j
     pip install gspread gspread-dataframe &&\
     pip install --upgrade jax jaxlib
 
-# ml_design_bookをやる上で入れた すぐ消す
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-RUN rm requirements.txt
+# # ml_design_bookをやる上で入れた すぐ消す
+# COPY requirements.txt .
+# RUN pip install -r requirements.txt
+# RUN rm requirements.txt
 
 # jaxあるしpytorchはいらないかな?
 # RUN pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
