@@ -149,15 +149,9 @@
         "command": "-extension.vim_ctrl+k",
         "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
     },
-    // なんかMacのcmd [ が効かないので一時的に shift tabにする
     {
-        "key": "shift+tab",
-        "command": "editor.action.outdentLines",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "tab",
-        "command": "editor.action.indentLines",
-        "when": "editorTextFocus && !editorReadonly"
+        "key": "ctrl+d",
+        "command": "-extension.vim_ctrl+d",
+        "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
     }
 ]
