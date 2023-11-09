@@ -22,6 +22,7 @@
     "terminal.integrated.shell.osx": "/bin/bash",
     "git.autofetch": true,
     "editor.minimap.enabled": false,
+    "editor.minimap.renderCharacters": false,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 5000,
     "editor.cursorSurroundingLines": 5,
@@ -30,12 +31,45 @@
         "E402"
     ],
     "terminal.integrated.inheritEnv": false,
+    "remote.SSH.remotePlatform": {
+        "instance-ubuntu.us-west1-b.kaggle-masaki": "linux",
+        "masaki-paper-viewer-sr": "linux",
+        "instance-ubuntu.us-central1-a.kaggle-masaki": "linux",
+        "ubuntu-t4.us-west1-a.kaggle-masaki": "linux",
+        "benzaiten-t4.us-west1-a.kaggle-masaki": "linux",
+        "benzaiten-v100.us-central1-a.kaggle-masaki": "linux",
+        "benzaiten-t4-2.asia-northeast1-a.kaggle-masaki": "linux"
+    },
+    "notebook.lineNumbers": "on",
     "editor.inlineSuggest.enabled": true,
+    "notebook.output.textLineLimit": 100,
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.associations": {
+        "*.py": "python"
+    },
+    "python.formatting.provider": "black",
+    "jupyter.askForKernelRestart": false,
+    "git.ignoreRebaseWarning": true,
+    "git.confirmSync": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "chatgpt.promptPrefix.addTests": "次のコードに対するテストを実装してください",
+    "chatgpt.promptPrefix.findProblems": "次のコードの問題点を見つけてください",
+    "chatgpt.promptPrefix.optimize": "次のコードを最適化してください",
+    "chatgpt.promptPrefix.explain": "次のコードを説明してください",
+    "chatgpt.promptPrefix.addComments": "次のコードにコメントを追加してください",
+    "remote.SSH.useLocalServer": false,
+    "python.defaultInterpreterPath": "/Users/masaki/.pyenv/versions/3.9.7/bin/python",
+    "jupyter.interactiveWindow.creationMode": "perFile",
     "github.copilot.enable": {
         "*": true,
         "yaml": false,
-        "plaintext": true,
-        "markdown": false
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
     },
-    "python.formatting.provider": "black"
+    "workbench.colorTheme": "Default Dark+",
+    "github.copilot-labs.showBrushesLenses": true,
+    "github.copilot-labs.showTestGenerationLenses": true
 }
