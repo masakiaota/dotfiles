@@ -122,6 +122,8 @@ sudo apt-get update
 sudo apt-get -y install cuda-drivers
 
 
+# TODO install Docker https://docs.docker.com/engine/install/ubuntu/
+# [optional] NVIDIA Container Toolkit https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
 
 # pyenv
 sudo apt -y install git gcc make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev liblzma-dev libffi-dev zlib1g-dev
