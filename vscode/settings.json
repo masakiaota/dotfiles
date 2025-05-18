@@ -33,14 +33,14 @@
     ],
     "terminal.integrated.inheritEnv": false,
     "remote.SSH.remotePlatform": {
-        "instance-ubuntu.us-west1-b.kaggle-masaki": "linux",
-        "masaki-paper-viewer-sr": "linux",
-        "instance-ubuntu.us-central1-a.kaggle-masaki": "linux",
-        "ubuntu-t4.us-west1-a.kaggle-masaki": "linux",
-        "benzaiten-t4.us-west1-a.kaggle-masaki": "linux",
-        "benzaiten-v100.us-central1-a.kaggle-masaki": "linux",
-        "benzaiten-t4-2.asia-northeast1-a.kaggle-masaki": "linux"
     },
+    "remote.SSH.defaultExtensions": [
+        "github.copilot",
+        "github.copilot-chat",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "ms-toolsai.jupyter",
+    ],
     "notebook.lineNumbers": "on",
     "editor.inlineSuggest.enabled": true,
     "notebook.output.textLineLimit": 100,
