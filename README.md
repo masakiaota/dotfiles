@@ -3,8 +3,6 @@
 * 自分の把握しきれない設定は存在しないも同じ。
 * 必要最低限を意識しろ。
 
-### WIP
-- [x] shell scriptのなかでDarwinとLinuxで分離するようにしよう
 
 ### 使っているもの
 - written in .Brewfile
