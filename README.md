@@ -4,13 +4,10 @@
 * 必要最低限を意識しろ。
 
 ### WIP
-- [ ] ディレクトリ構造の見直し
 - [x] shell scriptのなかでDarwinとLinuxで分離するようにしよう
-- [ ] link.shのメンテ(ln -sは一つのファイルでいい)分けるとかえって面倒
-- [ ] install.shとlink.shはソフトごとに別々にファイルを書いてそれを読み込む用にしよう(xcode周りが入ってないと一発じゃ入れられないので)
 
 ### 使っているもの
-- written in .brewfile
+- written in .Brewfile
 
 ### 手順
 環境はmacを想定している
@@ -43,8 +40,7 @@ prefix(ctrl g)＋U(shift u)
 https://github.com/tmux-plugins/tpm
 
 ### Python環境
-重いがなんやかんやpyenvで使うものごと切り替えるのが便利。
-anacondaを入れるとpipする手間が省けたりして楽。(しかも実行速度も早いらしい？)
+pyenvを入れてるがuv推奨
 
 ### shell環境
 bashからfishを呼び出してる
