@@ -125,10 +125,24 @@ sudo apt-get -y install cuda-drivers
 # TODO install Docker https://docs.docker.com/engine/install/ubuntu/
 # [optional] NVIDIA Container Toolkit https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
 
-# pyenv
-sudo apt -y install git gcc make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev liblzma-dev libffi-dev zlib1g-dev
-curl https://pyenv.run | bash
-# パスなどはpyenvのgithubを見て通そう。shellによってやり方が違うぞ https://github.com/pyenv/pyenv
+# (AI作成、まだ未検証につき注意)NVIDIA Container Toolkitのインストール
+# distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+# curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
+# curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.list | \
+#     sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+#     sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+# sudo apt-get update
+# sudo apt-get install -y nvidia-container-toolkit
+# sudo nvidia-ctk runtime configure --runtime=docker
+# sudo systemctl restart docker
+
+# # [optional] pyenv
+# sudo apt -y install git gcc make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev liblzma-dev libffi-dev zlib1g-dev
+# curl https://pyenv.run | bash
+# # パスなどはpyenvのgithubを見て通そう。shellによってやり方が違うぞ https://github.com/pyenv/pyenv
+
+# uv https://docs.astral.sh/uv/getting-started/installation/
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
 
 # githubへの接続
