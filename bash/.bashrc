@@ -38,9 +38,7 @@ case "$OSTYPE" in
   darwin*)
     echo "OSX"
     source ~/dotfiles/bash/mac.bash
-    # forlab
-    source ~/.lab.bash
-    ;; 
+    ;;
   linux*)
     echo "LINUX"
     source ~/dotfiles/bash/linux.bash
