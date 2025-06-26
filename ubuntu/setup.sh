@@ -36,8 +36,8 @@ bind-key g send-prefix
 set-option -g default-shell /usr/bin/fish
 
 # tmuxを256色表示できるようにする
-set-option -g default-terminal screen-256color
-set -g terminal-overrides 'xterm:colors=256'
+set-option -g default-terminal "tmux-256color"
+set -ga terminal-overrides ",*256col*:Tc"
 
 # ステータスバーをトップに配置する
 set-option -g status-position top
