@@ -38,7 +38,7 @@ prefix(ctrl g)＋U(shift u)
 https://github.com/tmux-plugins/tpm
 
 ### Python環境
-pyenvを入れてるがuv推奨
+uv推奨
 
 ### shell環境
 bashからfishを呼び出してる

@@ -11,7 +11,7 @@ if [ $? -gt 0 ]; then
 fi
 
 # commnad line tools
-brew install fish tmux tree htop reattach-to-user-namespace pyenv wget bat docker #rmtrash #rmtrash無くなった疑惑
+brew install fish tmux tree htop reattach-to-user-namespace uv wget bat docker #rmtrash #rmtrash無くなった疑惑
 
 # install application
 brew install --cask visual-studio-code karabiner-elements google-chrome iterm2 docker slack cheatsheet clipy notion
