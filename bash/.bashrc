@@ -8,14 +8,17 @@ eval $(/opt/homebrew/bin/brew shellenv) # homebrewにpathを通す M1macにbrew�
 
 case $- in
     *i*)#インタラクティブモードの処理をこの中に書く。
-        #まずはfishやxonshの起動を試みる。
+      # CursorのAIエージェント実行ではbashのままにする
+      if [[ "${CURSOR_AGENT:-0}" == "1" ]]; then
+        :
+      else
         echo "starting fish"
-        if type "fish" > /dev/null 2>&1; then
-            #コマンドが存在する時の処理
-            exec fish
+        if command -v fish >/dev/null 2>&1; then
+          exec fish
         else
-            echo "fish is not exist!" #コマンドが存在しないときの処理
+          echo "fish is not exist!"
         fi
+      fi
         ;;
       #*) return;;
 esac
@@ -56,3 +59,4 @@ esac
 # alias g++=g++-8
 
 
+. "$HOME/.cargo/env"
