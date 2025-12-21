@@ -2,6 +2,9 @@
 export LANG=ja_JP.UTF-8
 eval $(/opt/homebrew/bin/brew shellenv) # homebrewにpathを通す M1macにbrewをインストールしたときに設定
 
+# user-local binaries (e.g. uv installed by the official installer)
+export PATH="$HOME/.local/bin:$PATH"
+
 #if [[ "$OSTYPE" == "linux-gnu" ]]; then
     #export PATH=$PATH:/home/lab/masaki/.linuxbrew/bin
 #fi
