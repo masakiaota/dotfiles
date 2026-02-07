@@ -184,5 +184,6 @@
             "approveRequest": false,
             "approveResponse": true
         }
-    }
+    },
+    "claudeCode.preferredLocation": "panel"
 }
