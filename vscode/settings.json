@@ -21,7 +21,6 @@
     "markdown-preview-enhanced.breakOnSingleNewLine": false,
     "terminal.integrated.shell.osx": "/bin/bash",
     "git.autofetch": true,
-    "editor.minimap.enabled": false,
     "editor.minimap.showSlider": "always",
     "editor.minimap.renderCharacters": false,
     "files.autoSave": "afterDelay",
@@ -65,7 +64,7 @@
     "github.copilot.enable": {
         "*": true,
         "plaintext": false,
-        "markdown": false,
+        "markdown": true,
         "scminput": false,
         "yaml": true
     },
@@ -175,5 +174,15 @@
         "eval": false,
         "Invoke-Expression": false,
         "iex": false
+    },
+    "editor.minimap.enabled": false,
+    "chat.editor.fontSize": 14,
+    "chat.fontSize": 14,
+    "chat.agent.maxRequests": 100,
+    "chat.tools.urls.autoApprove": {
+        "https://raw.githubusercontent.com": {
+            "approveRequest": false,
+            "approveResponse": true
+        }
     }
 }
