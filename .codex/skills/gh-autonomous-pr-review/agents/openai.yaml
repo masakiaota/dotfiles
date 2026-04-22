@@ -1,4 +1,0 @@
-interface:
-  display_name: "Autonomous PR Review"
-  short_description: "未解決 PR review thread を自律判断し修正・返信する"
-  default_prompt: "Use $gh-autonomous-pr-review to read unresolved PR review threads, decide what to do, and reply to each thread."

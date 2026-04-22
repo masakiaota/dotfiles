@@ -1,0 +1,10 @@
+name: dotfiles
+version: 1.0.0
+description: APM project for dotfiles
+author: Masaki AOTA
+dependencies:
+  apm:
+  - forrestchang/andrej-karpathy-skills/skills/karpathy-guidelines
+  - anthropics/skills/skills/doc-coauthoring
+  mcp: []
+scripts: {}

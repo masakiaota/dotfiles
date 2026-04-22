@@ -1,0 +1,22 @@
+lockfile_version: '1'
+generated_at: '2026-04-22T14:55:42.465402+00:00'
+apm_version: 0.9.1
+dependencies:
+- repo_url: anthropics/skills
+  host: github.com
+  resolved_commit: b9e19e6f44773509fbdd7001d77ff41a49a486c1
+  virtual_path: skills/doc-coauthoring
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/doc-coauthoring
+  - .claude/skills/doc-coauthoring
+  - .cursor/skills/doc-coauthoring
+  content_hash: sha256:b964e4c3ffe13f66f76dd7919073e60c7aec622cd8a8363bb36323188100cf8e
+- repo_url: forrestchang/andrej-karpathy-skills
+  host: github.com
+  resolved_commit: 2c606141936f1eeef17fa3043a72095b4765b9c2
+  virtual_path: skills/karpathy-guidelines
+  is_virtual: true
+  package_type: claude_skill
+  content_hash: sha256:41e8ca055bbde13d240776a14a076a59614057200340c243130a76ba4e64cac8
