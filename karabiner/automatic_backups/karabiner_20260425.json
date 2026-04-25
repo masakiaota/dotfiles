@@ -77,7 +77,6 @@
                     },
                     {
                         "description": "Change control + m to escape only if pressed at the same time. and toggle to english",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
