@@ -15,7 +15,7 @@ If you need a reference for PR lookup or review-thread pagination, inspect the s
 
 1. Run `gh auth status` and stop immediately if GitHub CLI is not authenticated.
 2. Resolve the open PR for the current branch.
-3. Run `python scripts/fetch_unresolved_threads.py --json` and inspect only unresolved review threads.
+3. Run `scripts/fetch_unresolved_threads.py --json` with an available Python runner and inspect only unresolved review threads. `python` in examples is only a placeholder; use whatever works in the current environment, such as `python3`, `uv run python`, or a bundled Python executable.
 4. Classify each thread into exactly one of these buckets:
    - `accept-and-fix`
    - `reject-with-reason`
@@ -60,6 +60,8 @@ When reporting back to the user, summarize each thread in this order:
 Keep the summary thread-oriented. Do not collapse multiple review threads into one decision.
 
 ## Scripts
+
+Use an available Python runner for these commands. `python` below is an example command name, not a requirement; on macOS this may need to be `python3`, and in some repositories `uv run python` or a bundled Python executable may be the correct choice.
 
 - `python scripts/fetch_unresolved_threads.py --json`
   - Print unresolved review threads as machine-readable JSON.
