@@ -1,7 +1,7 @@
 ---
-
-## name: commit-message
+name: commit-message
 description: Generate descriptive Japanese commit messages by analyzing git diffs with Conventional Commits. Use when the user asks for help writing commit messages, reviewing staged changes, or preparing a commit command.
+---
 
 # コミットメッセージ生成
 
