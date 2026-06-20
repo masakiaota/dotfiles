@@ -25,8 +25,5 @@ cask "visual-studio-code"
 cask "ticktick"
 cask "google-japanese-ime"
 cask "deepl"
-cask "rstudio"
 cask "figma"
-cask "miro"
 cask "docker"
-
