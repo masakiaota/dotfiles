@@ -44,11 +44,11 @@ Do not paste the full conversation or use references such as "the change discuss
 
 ## Start a fresh worker
 
-Run `scripts/delegate_worker.sh` relative to this skill directory. Pass the task through stdin:
+Invoke `scripts/delegate_worker.sh` through `/bin/sh` relative to this skill directory so the script does not require an executable bit. The script and its parent directories must still be readable and traversable. Pass the task through stdin:
 
 ```sh
 printf '%s\n' "$worker_brief" | \
-  <skill-dir>/scripts/delegate_worker.sh \
+  /bin/sh "<skill-dir>/scripts/delegate_worker.sh" \
     --model gpt-5.6-luna \
     --effort xhigh \
     --cwd /absolute/path/to/workspace
@@ -70,7 +70,7 @@ Start a persistent worker and retain its session ID:
 
 ```sh
 printf '%s\n' "$worker_brief" | \
-  <skill-dir>/scripts/delegate_worker.sh \
+  /bin/sh "<skill-dir>/scripts/delegate_worker.sh" \
     --persist \
     --session-id-file /absolute/path/to/session-id \
     --model gpt-5.6-sol \
@@ -82,7 +82,7 @@ Continue that exact worker:
 
 ```sh
 printf '%s\n' "$follow_up_brief" | \
-  <skill-dir>/scripts/delegate_worker.sh \
+  /bin/sh "<skill-dir>/scripts/delegate_worker.sh" \
     --resume "$(sed -n '1p' /absolute/path/to/session-id)"
 ```
 
