@@ -1,0 +1,4 @@
+interface:
+  display_name: "Delegate Worker"
+  short_description: "親・subagent・隔離workerから適切な実行先を選ぶ"
+  default_prompt: "Use $delegate-worker to choose the appropriate execution surface for this task, then delegate only when appropriate."
