@@ -56,6 +56,12 @@ printf '%s\n' "$worker_brief" | \
 
 Fresh workers are ephemeral by default. Add `--allow-non-git` only when intentionally targeting a trusted non-repository directory.
 
+## Wait for completion
+
+Run the wrapper as a foreground process and base completion only on the child process's exit code. Command tools may return a session handle when the worker exceeds their initial wait window. A result containing `session_id` but no `exit_code` means the worker is still running, not that it failed or returned an empty response.
+
+Preserve that session ID and poll the same process with empty input, such as through `write_stdin`, until an exit code is present. Do not launch a duplicate worker, classify an intermediate empty stdout as failure, or integrate partial output. Treat exit code `0` as success and a nonzero exit code as failure; then consume the final stdout or captured diagnostics.
+
 ## Persist or resume a worker conversation
 
 Use persistence only when the user expects follow-up turns with the same worker. Persistence retains the worker's own conversation; it still does not inherit the parent conversation.
