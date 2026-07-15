@@ -77,3 +77,36 @@ Use an available Python runner for these commands. `python` below is an example 
 - If `gh` is unauthenticated, stop and tell the user to run `gh auth login`.
 - If no open PR is associated with the current branch, stop and report that no PR was found.
 - If GitHub API calls fail, surface the exact operation that failed and do not attempt partial mutation retries blindly.
+
+## Shell-Safe Reply Text
+
+When invoking `reply_review_thread.py` through a shell command, treat the reply body as
+untrusted shell input. Do not interpolate it with `JSON.stringify`, double quotes, or an
+unquoted heredoc: Markdown backticks, `$VAR`, and `$(...)` can be evaluated by the shell.
+
+Use a POSIX single-quote helper and pass the result as the `--body` argument:
+
+```javascript
+function shellQuote(value) {
+  return "'" + value.replaceAll("'", "'\"'\"'") + "'";
+}
+
+const cmd = `uv run python scripts/reply_review_thread.py \\
+  --thread-id ${threadId} --body ${shellQuote(body)}`;
+```
+
+After every reply, inspect the returned JSON `body` and confirm that it exactly matches the
+intended comment before resolving the thread. If it differs, post a correction before resolving.
+
+### Preserve Comment Semantics Across Interpreters
+
+A review reply passes through more than one interpreter: the shell, the GitHub API, and GitHub
+Flavored Markdown. Before posting, identify characters whose meaning can change at any boundary
+and use the target format's literal syntax. For Markdown, wrap code identifiers and literal
+syntax in backticks; this includes names such as `**slots**`, `_private_name`, `*args`, `#tag`,
+and brackets.
+
+Treat the returned JSON as confirmation of stored source text only, not rendered appearance. If
+the source has Markdown-sensitive text or the reply corrects a rendering issue, inspect it once
+as Markdown before posting and verify the returned source text afterward. Do not resolve the
+thread until the reply preserves the intended meaning at every boundary.
