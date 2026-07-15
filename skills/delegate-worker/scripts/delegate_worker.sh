@@ -135,7 +135,7 @@ while [ "$#" -gt 0 ]; do
 done
 
 case "$effort" in
-  none|minimal|low|medium|high|xhigh|max) ;;
+  low|medium|high|xhigh|max) ;;
   ultra)
     echo "delegate_worker.sh: ultra is prohibited because it can recursively delegate" >&2
     exit 2
@@ -239,9 +239,8 @@ cleanup() {
 
 trap cleanup 0 HUP INT TERM
 
-echo "delegate-worker: worker を開始する（wrapper PID: $$）。" >&2
-echo "delegate-worker: session_id が返り exit_code がない場合は、同じ session を終了まで監視すること。" >&2
-echo "delegate-worker: 空の output は worker の完了を意味しない。" >&2
+echo "delegate-worker: 作業を開始する（このスクリプトの PID: $$）。終了までこのスクリプトが待機する。" >&2
+echo "delegate-worker: session_id が返ったら、PID は確認せず同じ session を終了まで待機する。空の output は完了ではない。" >&2
 
 ensure_last_message() {
   if [ -s "$last_message" ]; then

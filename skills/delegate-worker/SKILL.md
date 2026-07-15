@@ -21,7 +21,7 @@ When both delegation paths fit, prefer the native subagent for context fidelity 
 
 Read [references/model-routing.md](references/model-routing.md) before choosing settings. Honor an explicit user selection first. Otherwise classify the task and select the narrowest sufficient model and effort from that routing guide.
 
-If no route clearly applies, use `gpt-5.6-luna` with `xhigh` reasoning. Never select `ultra`, because it can automatically create subagents and conflicts with this skill's no-recursive-delegation rule. Use `max` as the ceiling.
+If no route clearly applies, use `gpt-5.6-luna` with `xhigh` reasoning. For models listed in the routing guide, use only their listed efforts. Never select `ultra`, because it can automatically create subagents and conflicts with this skill's no-recursive-delegation rule.
 
 ## Select permissions and configuration
 
@@ -56,7 +56,7 @@ printf '%s\n' "$worker_brief" | \
 
 Fresh workers are ephemeral by default. Add `--allow-non-git` only when intentionally targeting a trusted non-repository directory.
 
-Before starting a worker, the wrapper prints a short wait notice with its PID. Use that PID only for supplementary liveness checks. Treat a command result with `session_id` but no `exit_code` as running even when its interim output is empty. Keep polling that same session; do not infer completion from the wait notice, PID, or an empty interim result.
+Before starting a worker, the script states that it waits for completion itself and prints its PID. Do not inspect that PID during normal operation. Treat a command result with `session_id` but no `exit_code` as running even when its interim output is empty, and keep polling that same session until it finishes.
 
 ## Wait for completion
 

@@ -1,5 +1,16 @@
 # Model routing
 
+## Supported `codex exec` efforts
+
+Scope: `codex exec --config model_reasoning_effort="..."`; accepted values are model-dependent. `ultra` is intentionally excluded because its automatic delegation conflicts with the no-redelegation policy. Every listed combination completed an actual `codex exec` run with Codex CLI v0.144.1 in this environment.
+
+| Model | Accepted values |
+|---|---|
+| `gpt-5.6-luna` | `low`, `medium`, `high`, `xhigh`, `max` |
+| `gpt-5.6-terra` | `low`, `medium`, `high`, `xhigh`, `max` |
+| `gpt-5.6-sol` | `low`, `medium`, `high`, `xhigh`, `max` |
+| `gpt-5.3-codex-spark` | `low`, `medium`, `high`, `xhigh` |
+
 Choose the model from task shape, not from a fixed quality ladder. An explicit user choice wins. The defaults and examples below combine the user's preferred routing with current Codex guidance: Luna for clear repeatable work, Terra for everyday agentic work, and Sol for complex open-ended work.
 
 ## Primary routes
@@ -27,5 +38,5 @@ Choose the model from task shape, not from a fixed quality ladder. An explicit u
 
 - Use `medium` or `high` only when the task is deterministic enough that rate savings outweigh extra checking.
 - Use `xhigh` as the default when no route clearly applies.
-- Use `max` for the hardest single-agent tasks or when the selected route explicitly calls for it.
+- Use `max` only for the hardest single-agent tasks or when the selected route explicitly calls for it.
 - Never use `ultra`; it may automatically delegate to subagents.
