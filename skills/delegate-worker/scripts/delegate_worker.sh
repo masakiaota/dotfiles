@@ -239,8 +239,8 @@ cleanup() {
 
 trap cleanup 0 HUP INT TERM
 
-echo "delegate-worker: 作業を開始する（このスクリプトの PID: $$）。終了までこのスクリプトが待機する。" >&2
-echo "delegate-worker: session_id が返ったら、PID は確認せず同じ session を終了まで待機する。空の output は完了ではない。" >&2
+echo "delegate-worker: 作業を開始する（PID: $$）。" >&2
+echo "delegate-worker: AIはこのスクリプトが完了まで待機する。PID は確認しない。途中の出力がなくても処理中である。" >&2
 
 ensure_last_message() {
   if [ -s "$last_message" ]; then
