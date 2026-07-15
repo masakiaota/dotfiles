@@ -12,7 +12,7 @@ Options:
   --model MODEL          Model for a new worker (default: gpt-5.6-luna)
   --effort LEVEL         Reasoning effort for a new worker (default: xhigh)
   -C, --cwd DIR          New-worker directory (default: current directory)
-  -o, --output FILE      Also write the final worker message to FILE
+  -o, --output FILE      Also retain the final worker message in FILE
   --persist              Persist a new worker so it can be resumed
   --session-id-file FILE Write the persistent session ID to FILE
   --resume SESSION_ID    Resume an existing persistent worker
@@ -209,9 +209,13 @@ fi
 if [ "$allow_non_git" = true ]; then
   set -- "$@" --skip-git-repo-check
 fi
-if [ -n "$output" ]; then
-  set -- "$@" --output-last-message "$output"
+last_message=$output
+cleanup_last_message=false
+if [ -z "$last_message" ]; then
+  last_message=$(mktemp "${TMPDIR:-/tmp}/delegate-worker-last-message.XXXXXX")
+  cleanup_last_message=true
 fi
+set -- "$@" --output-last-message "$last_message"
 if [ -n "$resume_id" ]; then
   set -- "$@" "$resume_id"
 fi
@@ -224,8 +228,32 @@ run_worker() {
   fi
 }
 
+cleanup() {
+  if [ -n "${diagnostics:-}" ]; then
+    rm -f "$diagnostics"
+  fi
+  if [ "$cleanup_last_message" = true ]; then
+    rm -f "$last_message"
+  fi
+}
+
+trap cleanup 0 HUP INT TERM
+
+echo "delegate-worker: worker を開始する。" >&2
+echo "delegate-worker: session_id が返り exit_code がない場合は、同じ session を終了まで監視すること。" >&2
+echo "delegate-worker: 空の output は worker の完了を意味しない。" >&2
+
+ensure_last_message() {
+  if [ -s "$last_message" ]; then
+    return 0
+  fi
+  echo "delegate-worker: worker は成功したが、最終メッセージを取得できなかった" >&2
+  return 1
+}
+
 if [ "$verbose" = true ]; then
   if run_worker "$@"; then
+    ensure_last_message
     if [ -n "$session_id_file" ] && [ -n "$resume_id" ]; then
       printf '%s\n' "$resume_id" >"$session_id_file"
     fi
@@ -236,9 +264,12 @@ if [ "$verbose" = true ]; then
 fi
 
 diagnostics=$(mktemp "${TMPDIR:-/tmp}/delegate-worker.XXXXXX")
-trap 'rm -f "$diagnostics"' 0 HUP INT TERM
 
-if run_worker "$@" 2>"$diagnostics"; then
+if run_worker "$@" >"$diagnostics" 2>&1; then
+  if ! ensure_last_message; then
+    cat "$diagnostics" >&2
+    exit 1
+  fi
   if [ -n "$session_id_file" ]; then
     if [ -n "$resume_id" ]; then
       session_id=$resume_id
@@ -251,6 +282,7 @@ if run_worker "$@" 2>"$diagnostics"; then
     fi
     printf '%s\n' "$session_id" >"$session_id_file"
   fi
+  cat "$last_message"
   exit 0
 else
   status=$?

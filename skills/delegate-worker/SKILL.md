@@ -56,6 +56,8 @@ printf '%s\n' "$worker_brief" | \
 
 Fresh workers are ephemeral by default. Add `--allow-non-git` only when intentionally targeting a trusted non-repository directory.
 
+Before starting a worker, the wrapper prints a short wait notice. Treat a command result with `session_id` but no `exit_code` as running even when its interim output is empty. Keep polling that same session; do not infer completion from the wait notice or an empty interim result.
+
 ## Wait for completion
 
 Run the wrapper as a foreground process and base completion only on the child process's exit code. Command tools may return a session handle when the worker exceeds their initial wait window. A result containing `session_id` but no `exit_code` means the worker is still running, not that it failed or returned an empty response.
@@ -94,6 +96,6 @@ If the saved worker uses a non-Git directory, pass `--allow-non-git` on both the
 
 ## Integrate the result
 
-Successful runs emit only the final worker message on stdout. Add `--verbose` when progress is needed; failures reveal captured diagnostics on stderr. `--verbose` cannot be combined with `--session-id-file` for a new persistent worker, but it may be used after resuming. Use `--output /absolute/path` when retaining the final message as an artifact is useful.
+For non-verbose runs, successful workers emit only the final worker message on stdout; the wrapper captures other Codex output internally. Add `--verbose` when progress is needed; failures reveal captured diagnostics on stderr. `--verbose` cannot be combined with `--session-id-file` for a new persistent worker, but it may be used after resuming. Use `--output /absolute/path` to retain a copy of the final message.
 
 Treat the response as subordinate evidence. Verify important claims against referenced files, commands, tests, or primary sources. Retry at most once when a tighter brief, supported model, or higher effort is likely to address a specific failure. Otherwise continue in the parent or report the limitation. The child uses the same Codex authentication and rate pool; isolation does not create a separate quota.
