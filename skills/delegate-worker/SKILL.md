@@ -56,7 +56,7 @@ printf '%s\n' "$worker_brief" | \
 
 Fresh workers are ephemeral by default. Add `--allow-non-git` only when intentionally targeting a trusted non-repository directory.
 
-Before starting a worker, the wrapper prints a short wait notice. Treat a command result with `session_id` but no `exit_code` as running even when its interim output is empty. Keep polling that same session; do not infer completion from the wait notice or an empty interim result.
+Before starting a worker, the wrapper prints a short wait notice with its PID. Use that PID only for supplementary liveness checks. Treat a command result with `session_id` but no `exit_code` as running even when its interim output is empty. Keep polling that same session; do not infer completion from the wait notice, PID, or an empty interim result.
 
 ## Wait for completion
 

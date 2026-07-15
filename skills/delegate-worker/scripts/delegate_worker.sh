@@ -239,7 +239,7 @@ cleanup() {
 
 trap cleanup 0 HUP INT TERM
 
-echo "delegate-worker: worker を開始する。" >&2
+echo "delegate-worker: worker を開始する（wrapper PID: $$）。" >&2
 echo "delegate-worker: session_id が返り exit_code がない場合は、同じ session を終了まで監視すること。" >&2
 echo "delegate-worker: 空の output は worker の完了を意味しない。" >&2
 
