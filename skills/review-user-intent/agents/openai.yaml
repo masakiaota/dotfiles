@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review User Intent"
+  short_description: "会話全体からユーザー意図とのずれを独立にレビューする"
+  default_prompt: "Use $review-user-intent to independently review whether this approach aligns with the user's intent."
+policy:
+  allow_implicit_invocation: false
