@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adapt to User"
+  short_description: "ユーザーの応答上の好みを記録し、次の返答へ適用する"
+  default_prompt: "$adapt-to-user を使い、保存済みの好みを反映してこの依頼に答えてください。"
