@@ -1,6 +1,12 @@
 .DS_Store
 fish/conf.d/local_*.fish
 
+# Native Karabiner helper built locally from the tracked Objective-C source.
+karabiner/scripts/left_keypad_window_layout
+
+# Karabiner-managed local rollback snapshots; not portable configuration.
+karabiner/automatic_backups/
+
 
 # APM dependencies
 apm_modules/

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shortcut Visualizer"
+  short_description: "Create and maintain visual keymaps for shortcut devices"
+  default_prompt: "Create or update a visual keymap that stays synchronized with this shortcut configuration."
