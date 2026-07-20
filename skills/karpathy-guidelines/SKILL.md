@@ -1,5 +1,8 @@
 ---
-description: Behavioral guidelines to reduce common LLM coding mistakes. Use when writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria.
+description: |-
+    Behavioral guidelines for cautious, minimal, and verifiable code changes.
+    Triggers: The user explicitly requests this skill's application, for example by using `$karpathy-guidelines`, saying "apply karpathy-guidelines", or asking to use Karpathy Guidelines.
+    Do not trigger: Any request that does not explicitly request this skill's application, including ordinary implementation, review, refactoring, design, or testing work. Questions about this skill's content, configuration, triggering conditions, or edits also do not trigger it unless the user explicitly asks to apply it.
 license: MIT
 metadata:
     github-path: skills/karpathy-guidelines
