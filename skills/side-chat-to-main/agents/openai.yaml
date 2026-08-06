@@ -1,0 +1,4 @@
+interface:
+  display_name: "Side Chat to Main"
+  short_description: "side chatの決定をmain chatへ確実に引き継ぐ"
+  default_prompt: "$side-chat-to-main を使い、この side chat の決定を main chat に送って。"
