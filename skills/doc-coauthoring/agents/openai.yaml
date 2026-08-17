@@ -1,0 +1,6 @@
+interface:
+  display_name: "Doc Co-Authoring"
+  short_description: "文書を三段階で共同制作し、第三者の読者視点で検証する"
+  default_prompt: "Use $doc-coauthoring to collaboratively draft and reader-test this document."
+policy:
+  allow_implicit_invocation: false
