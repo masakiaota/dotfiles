@@ -9,7 +9,6 @@ Scope: `codex exec --config model_reasoning_effort="..."`; accepted values are m
 | `gpt-5.6-luna` | `low`, `medium`, `high`, `xhigh`, `max` |
 | `gpt-5.6-terra` | `low`, `medium`, `high`, `xhigh`, `max` |
 | `gpt-5.6-sol` | `low`, `medium`, `high`, `xhigh`, `max` |
-| `gpt-5.3-codex-spark` | `low`, `medium`, `high`, `xhigh` |
 
 Choose the model from task shape, not from a fixed quality ladder. An explicit user choice wins. If no route clearly applies, use `gpt-5.6-terra` with `max` reasoning. The examples below combine the user's preferred routing with current Codex guidance: Luna for clear repeatable work, Terra for everyday agentic work, and Sol for complex open-ended work.
 
@@ -17,7 +16,7 @@ Choose the model from task shape, not from a fixed quality ladder. An explicit u
 
 | Task shape | Model | Effort | Examples |
 |---|---|---:|---|
-| Locate implementation points, file paths, JSON schemas, CSV schemas, symbols, or configuration keys | `gpt-5.3-codex-spark` | `xhigh` | Find an endpoint implementation; locate the schema consumed by a job; identify all call sites |
+| Locate implementation points, file paths, JSON schemas, CSV schemas, symbols, or configuration keys | `gpt-5.6-luna` | `medium` | Find an endpoint implementation; locate the schema consumed by a job; identify all call sites |
 | Narrow web research with a clear factual target | `gpt-5.6-luna` | `high` | Find the official usage of a library function; confirm an API parameter; locate an authoritative example |
 | Low-complexity, isolated implementation | `gpt-5.6-luna` | `max` | Single-file change; independent helper; conversion between explicitly defined schemas |
 | Clearly accepted implementation spanning files or carrying plausible side effects | `gpt-5.6-terra` | `max` | Feature touching handler, service, and tests; localized refactor with integration risk |
