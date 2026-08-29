@@ -1,5 +1,43 @@
 #!/bin/sh
 
+DOTFILES_DIR=$(CDPATH= cd "$(dirname "$0")" && pwd)
+
+link_config() {
+    source_path=$1
+    target_path=$2
+    target_dir=$(dirname "$target_path")
+
+    if [ -L "$target_path" ] && [ "$(readlink "$target_path")" = "$source_path" ]; then
+        echo "already linked: $target_path"
+        return
+    fi
+
+    mkdir -p "$target_dir"
+
+    if [ -e "$target_path" ] || [ -L "$target_path" ]; then
+        backup_path="${target_path}.bak.$(date +%Y%m%d%H%M%S)"
+        mv "$target_path" "$backup_path"
+        echo "backed up: $backup_path"
+    fi
+
+    ln -s "$source_path" "$target_path"
+    echo "linked: $target_path -> $source_path"
+}
+
+link_terminal_configs() {
+    link_config \
+        "$DOTFILES_DIR/ghostty/config.ghostty" \
+        "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
+    link_config \
+        "$DOTFILES_DIR/herdr/config.toml" \
+        "$HOME/.config/herdr/config.toml"
+}
+
+if [ "${1-}" = "terminal" ]; then
+    link_terminal_configs
+    exit 0
+fi
+
 # karabiner
 echo "setting karabiner ? (yes/no)"
 read ans
@@ -59,6 +97,12 @@ echo
 echo "setting vim..."
 cd
 ln -s ~/dotfiles/.vimrc
+
+echo
+
+# Ghostty and Herdr
+echo "setting Ghostty and Herdr..."
+link_terminal_configs
 
 echo
 
