@@ -50,3 +50,4 @@ case '*'
     echo Hi, stranger!
 end
 
+fish_add_path $HOME/.local/bin
