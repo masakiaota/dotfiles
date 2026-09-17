@@ -9,7 +9,7 @@ description: |-
     確立した用語だけで書ける短文。
 metadata:
     github-path: skills/semantic-generation
-    github-ref: refs/heads/master
+    github-ref: refs/heads/main
     github-repo: https://github.com/masakiaota/dotfiles
     github-tree-sha: e827f0ac7d9252ba8c175eccfb421cddabdde075
 name: semantic-generation
