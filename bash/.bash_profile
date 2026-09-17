@@ -1,7 +1,4 @@
-#初期状態らしい
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
+# ログインシェルでも共通の Bash 設定を読み込む
+if [ -r "$HOME/.bashrc" ]; then
+    . "$HOME/.bashrc"
 fi
-# 起動時に一回だけ読み込まれるfileらしい
-
-. "$HOME/.cargo/env"
