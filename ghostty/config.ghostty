@@ -1,2 +1,4 @@
-font-family = "Menlo"
+font-family = "PlemolJP35 Console NF"
+font-codepoint-map = U+2000-U+2BFF=UDEV Gothic 35NF
+font-codepoint-map = U+E000-U+F8FF,U+F0000-U+FFFFD=UDEV Gothic 35NF
 keybind = cmd+enter=ignore

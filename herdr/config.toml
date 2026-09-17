@@ -2,6 +2,8 @@ onboarding = false
 [ui]
 agent_panel_sort = "spaces"
 
+show_agent_labels_on_pane_borders = true
+status_indicators = "dots"
 [keys]
 prefix = "ctrl+g"
 
@@ -20,3 +22,6 @@ description = "open file viewer in tab"
 [terminal]
 default_shell = "/opt/homebrew/bin/fish"
 shell_mode = "login"
+
+[ui.toast]
+delivery = "herdr"
