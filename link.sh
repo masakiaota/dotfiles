@@ -70,6 +70,9 @@ mv config.fish config.fish.old
 mv functions functions.old
 ln -s ~/dotfiles/fish/config.fish
 ln -s ~/dotfiles/fish/functions
+link_config \
+    "$DOTFILES_DIR/fish/conf.d/fish_frozen_theme.fish" \
+    "$HOME/.config/fish/conf.d/fish_frozen_theme.fish"
 # cp fish.bak/fishd.* ~/dotfiles/fish/ #既存の設定の継承
 
 echo

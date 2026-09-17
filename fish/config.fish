@@ -36,7 +36,9 @@ alias gd="git diff"
 alias ga="git add"
 
 # OS enveronment
-echo OS is (uname)
+if status is-interactive
+    echo OS is (uname)
+end
 switch (uname)
 case Darwin
     source ~/dotfiles/fish/functions/mac.fish
@@ -47,5 +49,4 @@ case FreeBSD NetBSD DragonFly
 case '*'
     echo Hi, stranger!
 end
-
 
