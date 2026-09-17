@@ -11,16 +11,6 @@ set LANG ja_JP.UTF-8
 # end
 
 # alias
-# gitがめんどくさいので
-function gitlazy
-    git commit -m "$argv";
-    git push;
-end
-
-# git打つのがめんどくさいので
-alias gpl='git pull'
-
-# alias
 alias ta="tmux a"
 # alias ll="ls -lha"
 # alias la="ls -a" #これらはデフォでonになってた... 恐るべしfish
