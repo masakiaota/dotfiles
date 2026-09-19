@@ -68,7 +68,7 @@
         "scminput": false,
         "yaml": true
     },
-    "workbench.colorTheme": "Dark+",
+    "workbench.colorTheme": "Dark Modern",
     "github.copilot-labs.showBrushesLenses": true,
     "github.copilot-labs.showTestGenerationLenses": true,
     "terminal.integrated.fontSize": 14,
@@ -185,5 +185,10 @@
             "approveResponse": true
         }
     },
-    "claudeCode.preferredLocation": "panel"
+    "claudeCode.preferredLocation": "panel",
+    "chatgpt.localeOverride": "en-US",
+    "editor.accessibilitySupport": "off",
+    "chat.viewSessions.orientation": "stacked",
+    "chatgpt.composerEnterBehavior": "cmdAlways",
+    "chatgpt.followUpQueueMode": "steer"
 }

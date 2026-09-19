@@ -19,16 +19,18 @@ esac
 PS1="\n[\u@\h]\n\W\n\$ "
 
 # OSで条件分岐
-case "$OSTYPE" in
-    darwin*)
-        echo "OSX"
-        [ -r "$HOME/dotfiles/bash/mac.bash" ] && . "$HOME/dotfiles/bash/mac.bash"
-        ;;
-    linux*)
-        echo "LINUX"
-        [ -r "$HOME/dotfiles/bash/linux.bash" ] && . "$HOME/dotfiles/bash/linux.bash"
-        ;;
-    bsd*) echo "BSD" ;;
-    msys*) echo "WINDOWS" ;;
-    *) echo "unknown: $OSTYPE" ;;
-esac
+if [ -t 1 ]; then
+    case "$OSTYPE" in
+        darwin*)
+            echo "OSX"
+            [ -r "$HOME/dotfiles/bash/mac.bash" ] && . "$HOME/dotfiles/bash/mac.bash"
+            ;;
+        linux*)
+            echo "LINUX"
+            [ -r "$HOME/dotfiles/bash/linux.bash" ] && . "$HOME/dotfiles/bash/linux.bash"
+            ;;
+        bsd*) echo "BSD" ;;
+        msys*) echo "WINDOWS" ;;
+        *) echo "unknown: $OSTYPE" ;;
+    esac
+fi
