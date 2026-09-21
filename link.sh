@@ -33,8 +33,22 @@ link_terminal_configs() {
         "$HOME/.config/herdr/config.toml"
 }
 
+link_opencode_configs() {
+    link_config \
+        "$DOTFILES_DIR/opencode/opencode.jsonc" \
+        "$HOME/.config/opencode/opencode.jsonc"
+    link_config \
+        "$DOTFILES_DIR/opencode/tui.jsonc" \
+        "$HOME/.config/opencode/tui.jsonc"
+}
+
 if [ "${1-}" = "terminal" ]; then
     link_terminal_configs
+    exit 0
+fi
+
+if [ "${1-}" = "opencode" ]; then
+    link_opencode_configs
     exit 0
 fi
 
@@ -106,6 +120,12 @@ echo
 # Ghostty and Herdr
 echo "setting Ghostty and Herdr..."
 link_terminal_configs
+
+echo
+
+# OpenCode
+echo "setting OpenCode..."
+link_opencode_configs
 
 echo
 

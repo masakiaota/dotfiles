@@ -1,0 +1,9 @@
+{
+  "plugin": ["./herdr-tui-session.js"],
+  "keybinds": {
+    "app_exit": "<leader>q",
+    "command_list": "<leader>p",
+    "model_favorite_toggle": "<leader>f",
+    "permission.prompt.fullscreen": "<leader>f"
+  }
+}
