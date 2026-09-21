@@ -23,5 +23,8 @@ description = "open file viewer in tab"
 default_shell = "/opt/homebrew/bin/fish"
 shell_mode = "login"
 
+[advanced]
+scrollback_limit_bytes = 50000000
+
 [ui.toast]
 delivery = "herdr"
