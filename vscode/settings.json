@@ -68,7 +68,7 @@
         "scminput": false,
         "yaml": true
     },
-    "workbench.colorTheme": "Dark Modern",
+    "workbench.colorTheme": "Dark+",
     "github.copilot-labs.showBrushesLenses": true,
     "github.copilot-labs.showTestGenerationLenses": true,
     "terminal.integrated.fontSize": 14,
