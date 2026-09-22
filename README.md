@@ -22,12 +22,13 @@ sh link.sh
 ### 最後の仕上げ
 
 #### OpenCode
-`sh link.sh` は `opencode/opencode.jsonc` と `opencode/tui.jsonc` を
-`~/.config/opencode/` にリンクする。OpenCode設定だけを再リンクする場合は
-`sh link.sh opencode` を実行する。設定を変更した後はOpenCodeを再起動する。
+`sh link.sh` は `opencode/opencode.jsonc`、v1用の `opencode/tui.jsonc`、
+v2用の `opencode/cli.json` を `~/.config/opencode/` にリンクする。
+OpenCode設定だけを再リンクする場合は `sh link.sh opencode` を実行する。
+設定を変更した後はOpenCodeを再起動する。
 
-`tui.jsonc` が参照する `herdr-tui-session.js` はHerdrが生成・管理するため、Herdr
-のOpenCode連携を有効化して生成する。
+`tui.jsonc` と `cli.json` が参照する `herdr-tui-session.js` はHerdrが
+生成・管理するため、HerdrのOpenCode連携を有効化して生成する。
 
 #### vim
 vimのなかで
@@ -72,7 +73,7 @@ docker build -t masakiaota/jupyter_datascience .
 - fish ... 本来.config以下にある
   - functions ... こいつごとlinkしてる
   - config.fish ... 本体
-- opencode ... `opencode.jsonc` と `tui.jsonc`
+- opencode ... `opencode.jsonc`、`tui.jsonc`、`cli.json`
 - karabiner ... 本来.config以下にある
   - オレオレキーバインドが設定できる
 - vscode

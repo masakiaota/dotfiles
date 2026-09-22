@@ -40,6 +40,9 @@ link_opencode_configs() {
     link_config \
         "$DOTFILES_DIR/opencode/tui.jsonc" \
         "$HOME/.config/opencode/tui.jsonc"
+    link_config \
+        "$DOTFILES_DIR/opencode/cli.json" \
+        "$HOME/.config/opencode/cli.json"
 }
 
 if [ "${1-}" = "terminal" ]; then
