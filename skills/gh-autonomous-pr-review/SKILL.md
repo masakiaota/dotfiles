@@ -28,6 +28,7 @@ If you need a reference for PR lookup or review-thread pagination, inspect the s
    - `needs-user-input`: leave unresolved.
    - Treat `is_outdated` as context metadata, not as a resolution blocker.
      Reassess the thread against the latest code before deciding whether it is addressed.
+   - A thread made outdated by an `accept-and-fix` change in the current run is addressed and must be resolved after replying.
 8. Return a final user report in thread order.
 
 ## Decision Rules
@@ -35,7 +36,7 @@ If you need a reference for PR lookup or review-thread pagination, inspect the s
 - Choose `accept-and-fix` when the comment points to a local, safe, technically correct change that does not alter product intent.
 - Choose `needs-user-input` when the comment implies a product decision, a compatibility tradeoff, a broad refactor, or any behavior change that cannot be justified locally.
 - Choose `reject-with-reason` when the suggestion is incorrect, already addressed, contradicted by project intent, or would make the code worse.
-- Treat a thread's outdated status independently from whether it should be resolved. Reassess the latest code: resolve the thread when it has been addressed or conclusively rejected; leave it unresolved only when it still needs user input or its disposition remains unclear.
+- Treat a thread's outdated status independently from whether it should be resolved. A thread made outdated by the current run's accepted fix must be resolved after replying. For a thread that was already outdated, reassess the latest code: resolve it when addressed or conclusively rejected; leave it unresolved only when it still needs user input or its disposition remains unclear.
 - If there are zero unresolved threads, do not change code and do not post replies. Report that there was nothing to do.
 
 ## Reply Templates
