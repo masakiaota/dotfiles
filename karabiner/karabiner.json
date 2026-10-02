@@ -760,6 +760,32 @@
             },
             "devices": [
                 {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 615,
+                        "vendor_id": 1452
+                    },
+                    "fn_function_keys": [
+                        {
+                            "from": { "key_code": "f4" },
+                            "to": [{ "apple_vendor_keyboard_key_code": "launchpad" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 615,
+                        "vendor_id": 76
+                    },
+                    "fn_function_keys": [
+                        {
+                            "from": { "key_code": "f4" },
+                            "to": [{ "apple_vendor_keyboard_key_code": "launchpad" }]
+                        }
+                    ]
+                },
+                {
                     "disable_built_in_keyboard_if_exists": true,
                     "identifiers": {
                         "is_keyboard": true,
@@ -812,11 +838,11 @@
                 },
                 {
                     "from": { "key_code": "f5" },
-                    "to": [{ "key_code": "illumination_decrement" }]
+                    "to": [{ "consumer_key_code": "dictation" }]
                 },
                 {
                     "from": { "key_code": "f6" },
-                    "to": [{ "key_code": "illumination_increment" }]
+                    "to": [{ "generic_desktop": "do_not_disturb" }]
                 }
             ],
             "name": "Default profile",
