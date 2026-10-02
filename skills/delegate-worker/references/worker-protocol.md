@@ -12,7 +12,7 @@ Include the background and purpose the worker needs, no more and no less. State 
 
 ## Run the worker
 
-Pass the brief through stdin to the wrapper, using the model and effort selected from `model-routing.md`:
+Pass the brief through stdin to the wrapper, explicitly using the model and effort selected from the shared [model-routing.md](model-routing.md) table:
 
 ```sh
 printf '%s\n' "$worker_brief" | \
@@ -23,6 +23,8 @@ printf '%s\n' "$worker_brief" | \
 ```
 
 Add `--load-user-config` only when the task needs a user-configured MCP server, provider, hook, or other setting. Add `--allow-non-git` only when intentionally targeting a trusted non-repository directory.
+
+For a new worker, omitting the model and effort uses `gpt-6.1-sol` with `xhigh` reasoning. The wrapper disables subagent tools on both new and resumed runs; the brief's prohibition on launching another Codex process still applies.
 
 ## Continue a worker when needed
 

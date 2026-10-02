@@ -1,40 +1,22 @@
 # Model routing
 
-## Supported `codex exec` efforts
+Use this selection table for both native Codex subagents and `codex exec` workers. An explicit user choice wins. Otherwise, choose from these three models; if no route clearly applies, use `gpt-6.1-sol` with `xhigh` reasoning. Adjust the model and effort to the task's scope and difficulty.
 
-Scope: `codex exec --config model_reasoning_effort="..."`; accepted values are model-dependent.
+| Model | Role | Task and effort |
+|---|---|---|
+| `gpt-6-astra` | Difficult judgment, intent interpretation, design, and high-risk review | `xhigh` for advanced algorithms, debugging hypothesis generation, ambiguous intent, architecture, threat modeling, or deep research; `max` when errors are costly or the problem remains unresolved after an xhigh pass |
+| `gpt-6.1-sol` | Ordinary implementation and bounded debugging | `high` or `xhigh` for debugging with a reproduction and a bounded module; `xhigh` for ordinary feature work; `max` for accepted implementation spanning files or carrying plausible side effects |
+| `gpt-5.6-luna` | Clear, bounded work with readily verifiable results | `medium` for locating files, schemas, symbols, configuration keys, or call sites; `high` for narrow factual research; `medium` or `high` for extraction, classification, normalization, or structured summaries; `xhigh` for precision-sensitive mechanical transformations; `max` for low-complexity isolated implementation |
 
-| Model | Accepted values |
-|---|---|
-| `gpt-5.6-luna` | `low`, `medium`, `high`, `xhigh`, `max` |
-| `gpt-5.6-terra` | `low`, `medium`, `high`, `xhigh`, `max` |
-| `gpt-5.6-sol` | `low`, `medium`, `high`, `xhigh`, `max` |
-
-Choose the model from task shape, not from a fixed quality ladder. An explicit user choice wins. If no route clearly applies, use `gpt-5.6-terra` with `max` reasoning. The examples below combine the user's preferred routing with current Codex guidance: Luna for clear repeatable work, Terra for everyday agentic work, and Sol for complex open-ended work.
-
-## Primary routes
-
-| Task shape | Model | Effort | Examples |
-|---|---|---:|---|
-| Locate implementation points, file paths, JSON schemas, CSV schemas, symbols, or configuration keys | `gpt-5.6-luna` | `medium` | Find an endpoint implementation; locate the schema consumed by a job; identify all call sites |
-| Narrow web research with a clear factual target | `gpt-5.6-luna` | `high` | Find the official usage of a library function; confirm an API parameter; locate an authoritative example |
-| Low-complexity, isolated implementation | `gpt-5.6-luna` | `max` | Single-file change; independent helper; conversion between explicitly defined schemas |
-| Clearly accepted implementation spanning files or carrying plausible side effects | `gpt-5.6-terra` | `max` | Feature touching handler, service, and tests; localized refactor with integration risk |
-| Advanced algorithms, debugging hypothesis generation, meta-level review, intent interpretation, or difficult consultation | `gpt-5.6-sol` | `xhigh` | Algorithm design; intermittent bug hypotheses; architectural or adversarial review; ambiguous product intent |
-| Same as above where errors are costly or the problem remains unresolved after an xhigh pass | `gpt-5.6-sol` | `max` | Security-critical reasoning; hardest root-cause analysis; final review of a high-risk design |
-
-## Additional routes
-
-| Task shape | Model | Effort | Examples |
-|---|---|---:|---|
-| High-volume extraction, classification, normalization, or structured summaries with exact output rules | `gpt-5.6-luna` | `medium` or `high` | Normalize records; classify logs; extract fields; produce repetitive summaries |
-| Repetitive but precision-sensitive transformation | `gpt-5.6-luna` | `xhigh` | Mechanical migration from a documented pattern; generate fixtures from a schema; enforce a known format |
-| Localized debugging with a reproduction and a bounded module | `gpt-5.6-terra` | `high` or `xhigh` | Explain a deterministic failure; trace a request through a known subsystem |
-| Ordinary feature work requiring tool use and moderate judgment | `gpt-5.6-terra` | `xhigh` | Implement a conventional endpoint; update a small workflow with tests |
-| Open-ended architecture, threat modeling, deep multi-source research, or polished decision material | `gpt-5.6-sol` | `xhigh` or `max` | Compare architectures; build a threat model; synthesize conflicting evidence; draft an ADR |
+Use Luna only when the inputs, ownership, and completion criteria are clear. Choose Sol when implementation still requires judgment; choose Astra when the objective, approach, or risk itself requires difficult judgment. Retain GPT-5.6 Luna based on the user's experience of its practical quality and sufficiently low cost.
 
 ## Effort rules
 
-- Use `medium` or `high` only when the task is deterministic enough that rate savings outweigh extra checking.
-- Use `max` only for the hardest single-agent tasks, when the selected route explicitly calls for it, or for the fallback above.
-- Never use `ultra`; it may automatically delegate to subagents.
+For delegated work, select a supported single-agent effort from `low`, `medium`, `high`, `xhigh`, and `max`. Check the model and effort supported by the current runtime; native tool argument names may differ from `codex exec --config model_reasoning_effort="..."`.
+
+- Preserve the task-specific efforts above rather than lowering them solely because the model generation changed.
+- Use `medium` or `high` only when the task is deterministic enough that savings outweigh extra checking.
+- Use `max` when the selected route calls for it.
+- Never use `ultra` for delegated agents; it may automatically delegate to subagents.
+
+The three-model selection and effort table are the user's operating policy. For current availability and native configuration options, consult [OpenAI Models](https://learn.chatgpt.com/docs/models) and [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents).

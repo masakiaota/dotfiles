@@ -9,7 +9,7 @@ Usage:
   printf '%s\n' "TASK" | delegate_worker.sh [OPTIONS]
 
 Options:
-  --model MODEL          Model for a new worker (default: gpt-5.6-luna)
+  --model MODEL          Model for a new worker (default: gpt-6.1-sol)
   --effort LEVEL         Reasoning effort for a new worker (default: xhigh)
   -C, --cwd DIR          New-worker directory (default: current directory)
   -o, --output FILE      Also retain the final worker message in FILE
@@ -35,7 +35,7 @@ require_value() {
   fi
 }
 
-model=gpt-5.6-luna
+model=gpt-6.1-sol
 effort=xhigh
 model_set=false
 effort_set=false
@@ -206,6 +206,7 @@ fi
 if [ "$ignore_user_config" = true ]; then
   set -- "$@" --ignore-user-config
 fi
+set -- "$@" --config 'agents.enabled=false'
 if [ "$allow_non_git" = true ]; then
   set -- "$@" --skip-git-repo-check
 fi
