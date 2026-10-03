@@ -1,4 +1,6 @@
 font-family = "PlemolJP35 Console NF"
 font-codepoint-map = U+2000-U+23B9,U+23BE-U+24FF=UDEV Gothic 35NF
 font-codepoint-map = U+E000-U+E09F,U+E0D5-U+F8FF,U+F0000-U+FFFFD=UDEV Gothic 35NF
+font-size = 14
+font-thicken = true
 keybind = cmd+enter=ignore
