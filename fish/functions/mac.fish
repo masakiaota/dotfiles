@@ -1,6 +1,7 @@
 
 
 set -x PATH /usr/local/bin /usr/local/sbin $PATH
+fish_add_path --path /opt/homebrew/bin /opt/homebrew/sbin
 set -x PATH ~/.local/bin $PATH #online-judge-tools用
 set -x PATH ~/.nodebrew/current/bin:$PATH
 
