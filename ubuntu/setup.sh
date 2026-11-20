@@ -4,7 +4,7 @@ sudo apt-get -y upgrade
 sudo apt-get -y install fish # apt -y upgradeがかかってるのでしばらくは使えない
 
 # gitの設定
-git config --global user.email "aotamasakimail@gmail.com"
+git config --global user.email "41673718+masakiaota@users.noreply.github.com"
 git config --global user.name "masakiaota"
 
 # VScodeの環境設定
