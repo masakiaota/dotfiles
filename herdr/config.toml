@@ -20,8 +20,8 @@ command = "herdr-file-viewer.open-file-viewer-tab"
 description = "open file viewer in tab"
 
 [terminal]
-default_shell = "/opt/homebrew/bin/fish"
-shell_mode = "login"
+default_shell = "fish"
+shell_mode = "auto"
 
 [advanced]
 scrollback_limit_bytes = 50000000
